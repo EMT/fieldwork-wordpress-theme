@@ -1,0 +1,498 @@
+// Colors!
+
+$blog-pink: rgb(238,70,123);
+$blog-yellow: rgb(254,221,60);
+$blog-turquoise: rgb(63,212,173);
+$blog-blue: rgb(0,105,166);
+$blog-pink--light: rgb(241,133,206);
+$blog-lime-green: rgb(196,231,106);
+$blog-red: rgb(244,36,52);
+$blog-blue--light: rgb(155,230,215);
+$blog-orange: rgb(255,157,107);
+$blog-pale-green: rgb(227,231,51);
+
+// Category colors + backgrounds
+
+// Background
+
+li.code a.tag,
+li.code:hover a:after,
+li.code.active a:after, .code .post-image {
+	background: $blog-pink;
+}
+
+li.inspiring a.tag,
+li.inspiring:hover a:after,
+li.inspiring.active a:after,
+.inspiring .post-image {
+	background: $blog-yellow;
+}
+
+li.made a.tag,
+li.made:hover a:after,
+li.made.active a:after,
+.made .post-image {
+	background: $blog-turquoise;
+}
+
+li.out-and-about a.tag,
+li.out-and-about:hover a:after,
+li.out-and-about.active a:after,
+.out-and-about .post-image {
+	background: $blog-blue;
+}
+
+li.people a.tag,
+li.people:hover a:after,
+li.people.active a:after,
+.people .post-image {
+	background: $blog-pink--light;
+}
+
+li.process a.tag,
+li.process:hover a:after,
+li.process.active a:after,
+.process .post-image {
+	background: $blog-lime-green;
+}
+
+li.ideas a.tag,
+li.ideas:hover a:after,
+li.ideas.active a:after,
+.ideas .post-image {
+	background: $blog-red;
+}
+
+li.found a.tag,
+li.found:hover a:after,
+li.found.active a:after,
+.found .post-image {
+	background: $blog-blue--light;
+}
+
+li.present a.tag,
+li.present:hover a:after,
+li.present.active a:after,
+.present .post-image {
+	background: $blog-orange;
+}
+
+li.studio a.tag,
+li.studio:hover a:after,
+li.studio.active a:after,
+.studio .post-image {
+	background: $blog-pale-green;
+}
+
+// Color
+
+li.code a:hover,
+li.code.active a,
+.post-content.code .title,
+.post-content.code .caption,
+.post-content.code h3 {
+	color: $blog-pink;
+}
+
+li.inspiring a:hover,
+li.inspiring.active a,
+.post-content.inspiring .title,
+.post-content.inspiring .caption,
+.post-content.inspiring h3 {
+	color: $blog-yellow;
+}
+
+li.made a:hover,
+li.made.active a,
+.post-content.made .title,
+.post-content.made .caption,
+.post-content.made h3 {
+	color: $blog-turquoise;
+}
+
+li.out-and-about a:hover,
+li.out-and-about.active a,
+.post-content.out-and-about .title,
+.post-content.out-and-about .caption,
+.post-content.out-and-about h3 {
+	color: $blog-blue;
+}
+
+li.people a:hover,
+li.people.active a,
+.post-content.people .title,
+.post-content.people .caption,
+.post-content.people h3 {
+	color: $blog-pink--light;
+}
+
+li.process a:hover,
+li.process.active a,
+.post-content.process .title,
+.post-content.process .caption,
+.post-content.process h3 {
+	color: $blog-lime-green;
+}
+
+li.ideas a:hover,
+li.ideas.active a,
+.post-content.ideas .title,
+.post-content.ideas .caption,
+.post-content.ideas h3 {
+	color: $blog-red;
+}
+
+li.found a:hover,
+li.found.active a,
+.post-content.found .title,
+.post-content.found .caption,
+.post-content.found h3 {
+	color: $blog-blue--light;
+}
+
+li.present a:hover,
+li.present.active a,
+.post-content.present .title,
+.post-content.present .caption,
+.post-content.present h3 {
+	color: $blog-orange;
+}
+
+li.studio a:hover,
+li.studio.active a,
+.post-content.studio .title,
+.post-content.studio .caption, 
+.post-content.studio h3 {
+	color: $blog-pale-green;
+}
+
+// .uncategorized {
+// 	color: ;
+// }
+
+
+// Sidebar
+
+.sidebar h3 {
+	padding: 1em 0;
+	color: rgb(109, 110, 113);
+	font-size: 1.2em;
+}
+
+.sidebar h3:first-of-type {
+	padding-top: 0;
+}
+
+
+.category-links a {
+	text-decoration: none;
+	color: rgb(170,170,170);
+	display: block;
+	padding: 0.3em 0;
+	position: relative;
+	// font-size: 0.9em;
+}
+
+.category-icons {
+	list-style: none;
+	margin: 0.8em 0;
+	padding: 0;
+}
+
+.category-icons li {
+	display: inline-block;
+}
+
+.category-icons a.tag, .category-links a:after  {
+	content: '';
+	display: block;
+	height: 10px;
+	width: 10px;
+	border-radius: 15px;
+	position: relative;
+	background: rgb(209, 211, 212);
+}
+
+.category-links a:after {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.category-icons a.tag:hover:after, .category-icons a.tag.active:after {
+	content: '';
+	display: block;
+	top: 3px;
+	left: 3px;
+	right: 3px;
+	bottom: 3px;
+	border-radius: 15px;
+	background: rgb(255,255,255);
+	position: absolute;
+}
+
+// Contact form ( modified old styles )
+
+.contact-form {
+	margin-bottom: 2em;
+}
+.contact-form > div {
+	border-bottom: 1px solid rgb(170,170,170);
+	margin-bottom: 0.3em;
+}
+.contact-form input.text {
+	border: 0;
+	background: transparent;
+	padding: 0.7em 0;
+	color: rgb(111,124,124);
+	font-size: 1em;
+}
+.contact-form input.text:focus {
+	outline: none;
+}
+.contact-form input.button {
+	border: 0;
+	background: transparent;
+	padding: 0.3em 0;
+	font-size: 1em;
+	color: inherit;
+}
+.contact-form input.button:hover {
+	cursor: pointer;
+	color: darken(rgb(170,170,170),15%);
+}
+
+// Posts lists
+
+.post-list {
+	padding: 0;
+	list-style: none;
+}
+
+.post-list > li {
+	margin: 2em 0;
+}
+
+.post-list > li:first-of-type {
+	margin: 0 0 2em 0;
+}
+
+// No Image styles
+
+.post-image img {
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.post-image {
+	position: relative;
+	height: 0;
+	padding: 5% 5% 57.4% 5%;
+	margin: 0 0 1em 0;
+	overflow: hidden;
+
+	// Temp Typography stuff - please remove me!
+	font-size: 22px;
+
+}
+
+.post-image .category {
+	color: rgba(255,255,255,0.5);
+	margin: 0;
+
+	// Temp Typography stuff - please remove me!
+	font-size: 22px;
+}
+
+.post-image p {
+	color: rgb(255,255,255);
+	margin: 0.5em 0;
+}
+
+.post .category-icons {
+	float: left;
+	width: 100%;
+}
+
+.post-meta-data:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.post a {
+	text-decoration: none;
+}
+
+// Post -- Clean this up - seems a bit meh.
+
+.post .title {
+	text-align: center;
+	display: block;
+	float: left;
+	width: 50%;
+	color: rgb(88,89,91);
+}
+
+.post .title-long, .post .date, .post-content .title-long, .post-content .date {
+	color: rgb(167,169,172);
+}
+
+.post .under {
+	display: block;
+	margin: 0.5em 0;
+}
+
+.post .date {
+	float: left;
+	width: 25%;
+	display: block;
+}
+
+.post .go-to {
+	float: left;
+	width: 25%;
+	display: block;
+}
+
+// -- a needs a hover state.
+
+.post .go-to a {
+	display: block;
+	height: 21px;
+	width: 37px;
+	background: url("images/blog-arrow.png");
+	float: right;
+}
+
+// Post list pagination
+
+.pagination a {
+	text-decoration: none;
+	color: rgb(167,169,172);
+	padding: 2em 0;
+}
+
+.pagination .next {
+	float: right;
+}
+
+.pagination .prev {
+	float: left;
+}
+
+
+
+// Single Post
+
+.post-content:after, .images:after, .sidebar:after, .wrapper:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.post-content em {
+	font-style: italic;
+}
+
+.post-content strong {
+	font-weight: bold;
+}
+
+.post-content blockquote, .post-content q {
+	margin-left: 2em;
+	border-left: 3px solid rgb(204, 204, 204);
+	padding-left: 1em;
+}
+
+.post-content {
+	h1, h2, h3, h4, h5, h6 {
+		margin: 1em 0;
+	}
+}
+
+.post-content {
+	margin-bottom: 2em;
+}
+
+.post-content .caption, .post-content .caption-alt {
+	font-size: 0.9em;
+	margin: 0.1em;
+}
+
+.post-content .caption-alt {
+	color: rgb(167, 169, 172);
+}
+
+
+.post-content .meta-data {
+	float: left;
+	width: 10%;
+}
+
+.post-content .meta-data .category-icons {
+	margin: 0.2em 0;
+}
+
+.images .image-col-3 {
+	width: 33.33%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.images .image-col-2 {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.post-content img {
+	margin-bottom: 0.5em;
+}
+
+.image-col-1 {
+	float: left;
+	margin: 2em 0;
+}
+
+.post-content .images {
+	margin: 2em -10px;
+	float: left;
+}
+
+.post-content img {
+	max-width: 100%;
+	display: block;
+}
+
+.post-content .title-img {
+	margin-bottom: 2em;
+}
+
+.post-content .text {
+	width: 90%;
+	float: right;
+}
+
+.post-content p, .post-content ul {
+	margin: 1em 0;
+	line-height: 1.5;
+}
+
+.post-content a {
+	color: rgb(167,169,172);
+}
+
+.post-content ul li {
+	color: rgb(167,169,172);
+}
