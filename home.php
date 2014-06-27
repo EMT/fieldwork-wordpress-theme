@@ -25,7 +25,7 @@
 				<div class="post-meta-data">
 					<span class="date"><?php the_time('F j'); ?></span>
 					<span class="title"><?php the_title(); ?><span class="title-long"><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?> - <?php echo get_post_meta($post->ID, 'title_long', true); ?><?php endif; ?></span></span>
-					<span class="go-to"><a href="/blog-post/"></a></span>
+					<span class="go-to"><a href="<?php the_permalink() ?>"></a></span>
 					<ul class="category-icons">
 						<?php 
 						foreach((get_the_category()) as $category) { 
