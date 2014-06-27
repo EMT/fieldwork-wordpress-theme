@@ -11,5 +11,6 @@
 			<p>22 Lever St Manchester M1 1EA | hello@madebyfieldwork.com | 0161 235 5318</p>
 		</div>
 	</footer>
+	<?php wp_footer(); ?>
 </body>
 </html>
