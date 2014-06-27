@@ -5,6 +5,13 @@
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
+
+function mytheme_addbox() {
+add_meta_box('postexcerpt', __('Excerpt'), 'post_excerpt_meta_box', 'page', 'post', 'normal', 'core');
+}
+add_action( 'admin_menu', 'mytheme_addbox' );
+
+
 // Add in Featured images
 
 add_theme_support( 'post-thumbnails' ); 

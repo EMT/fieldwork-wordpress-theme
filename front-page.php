@@ -9,7 +9,7 @@
 		
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array('posts_per_page' => 3, 'paged' => $paged );
-query_posts($args); ?> 
+query_posts($args); ?>
 		 <?php if (have_posts()) : ?>
                <?php while (have_posts()) : the_post(); ?> 
 			
@@ -23,7 +23,7 @@ query_posts($args); ?>
 							} 
 						?>
 						<h5 class="category">Custom Category - Damn this will be 'fun' to impliment</h5>
-						<p>I'm hidden, Eeep - you can use me as a backup incase images don't load.</p>
+						<p><?php the_excerpt(); ?></p>
 						
 					</div>
 				</a>
@@ -38,7 +38,7 @@ query_posts($args); ?>
 				</div>
 			</article>
 		</li>
-<?php echo paginate_links( $args ); ?>
+
 		<?php endwhile; ?>
      <?php endif; ?>
 

@@ -16,7 +16,7 @@
 			} 
 			?>
 			<h5 class="category">Out And About</h5>
-			<p>I'm hidden, Eeep - you can use me as a backup incase images don't load.</p>
+			<p><?php the_excerpt(); ?></p>
 		</div>
 		<div class="inner-content">
 			<div class="meta-data">
@@ -39,10 +39,6 @@
 </div>
 <?php endwhile ?>
 <?php endif ?>
-
-<?php wp_reset_query(); ?>
-<?php wp_reset_postdata(); ?>
-
 
 <?php get_sidebar(); ?>
 

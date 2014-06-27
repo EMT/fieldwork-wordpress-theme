@@ -327,7 +327,8 @@ li.studio a:hover,
 
 .post-image p {
   color: white;
-  margin: 0.5em 0; }
+  margin: 0.5em 0;
+  line-height: 1.2; }
 
 .post .category-icons {
   float: left;
