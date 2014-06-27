@@ -51,11 +51,16 @@ table {
   /* IE9 Compat Modes */
   src: url("fonts/neuzeit-book.eot?#iefix") format("embedded-opentype"), url("fonts/neuzeit-book.woff") format("woff"), url("fonts/neuzeit-book.ttf") format("truetype"), url("fonts/neuzeit-book.svg#svgFontName") format("svg");
   /* Legacy iOS */ }
+html {
+  height: 100%; }
+
 body {
   font-family: 'Neuzeit';
   color: #6d6e71;
   background: #efefef;
-  margin-top: 5%; }
+  margin-top: 5%;
+  position: relative;
+  min-height: 100%; }
 
 header > div,
 footer > div,
@@ -81,131 +86,132 @@ footer > div,
 
 li.code a.tag,
 li.code:hover a:after,
-li.code.active a:after, .code .post-image {
+.wrapper.code-main li.code a:after,
+.post-list .code-main .post-image, .code-main .post-content .post-image {
   background: #ee467b; }
 
 li.inspiring a.tag,
 li.inspiring:hover a:after,
-li.inspiring.active a:after,
-.inspiring .post-image {
+.wrapper.inspiring-main li.inspiring a:after,
+.post-list .inspiring-main .post-image, .inspiring-main .post-content .post-image {
   background: #fedd3c; }
 
 li.made a.tag,
 li.made:hover a:after,
-li.made.active a:after,
-.made .post-image {
+.wrapper.made-main li.made a:after,
+.post-list .made-main .post-image, .made-main .post-content .post-image {
   background: #3fd4ad; }
 
 li.out-and-about a.tag,
 li.out-and-about:hover a:after,
-li.out-and-about.active a:after,
-.out-and-about .post-image {
+.wrapper.out-and-about-main li.out-and-about a:after,
+.post-list .out-and-about-main .post-image, .out-and-about-main .post-content .post-image {
   background: #0069a6; }
 
 li.people a.tag,
 li.people:hover a:after,
-li.people.active a:after,
-.people .post-image {
+.wrapper.people-main li.people a:after,
+.post-list .people-main .post-image, .people-main .post-content .post-image {
   background: #f185ce; }
 
 li.process a.tag,
 li.process:hover a:after,
-li.process.active a:after,
-.process .post-image {
+.wrapper.process-main li.process a:after,
+.post-list .process-main .post-image, .process-main .post-content .post-image {
   background: #c4e76a; }
 
 li.ideas a.tag,
 li.ideas:hover a:after,
-li.ideas.active a:after,
-.ideas .post-image {
+.wrapper.ideas-main li.ideas a:after,
+.post-list .ideas-main .post-image, .ideas-main .post-content .post-image {
   background: #f42434; }
 
 li.found a.tag,
 li.found:hover a:after,
-li.found.active a:after,
-.found .post-image {
+.wrapper.found-main li.found a:after,
+.post-list .found-main .post-image, .found-main .post-content .post-image {
   background: #9be6d7; }
 
 li.present a.tag,
 li.present:hover a:after,
-li.present.active a:after,
-.present .post-image {
+.wrapper.present-main li.present a:after,
+.post-list .present-main .post-image, .present-main .post-content .post-image {
   background: #ff9d6b; }
 
 li.studio a.tag,
 li.studio:hover a:after,
-li.studio.active a:after,
-.studio .post-image {
+.wrapper.studio-main li.studio a:after,
+.post-list .studio-main .post-image, .studio-main .post-content .post-image {
   background: #e3e733; }
 
 li.code a:hover,
-li.code.active a,
-.post-content.code .title,
-.post-content.code .caption,
-.post-content.code h3 {
+.wrapper.code-main li.code a,
+.wrapper.code-main .post-content .title,
+.wrapper.code-main .post-content .caption,
+.wrapper.code-main .post-content h3 {
   color: #ee467b; }
 
 li.inspiring a:hover,
-li.inspiring.active a,
-.post-content.inspiring .title,
-.post-content.inspiring .caption,
-.post-content.inspiring h3 {
+.wrapper.inspiring-main li.inspiring a,
+.wrapper.inspiring-main .post-content .title,
+.wrapper.inspiring-main .post-content .caption,
+.wrapper.inspiring-main .post-content h3 {
   color: #fedd3c; }
 
 li.made a:hover,
-li.made.active a,
-.post-content.made .title,
-.post-content.made .caption,
-.post-content.made h3 {
+.wrapper.made-main li.made a,
+.wrapper.made-main .post-content .title,
+.wrapper.made-main .post-content .caption,
+.wrapper.made-main .post-content h3 {
   color: #3fd4ad; }
 
 li.out-and-about a:hover,
-li.out-and-about.active a,
-.post-content.out-and-about .title,
-.post-content.out-and-about .caption,
-.post-content.out-and-about h3 {
+.wrapper.out-and-about-main li.out-and-about a,
+.wrapper.out-and-about-main .post-content .title,
+.wrapper.out-and-about-main .post-content .caption,
+.wrapper.out-and-about-main .post-content h3 {
   color: #0069a6; }
 
 li.people a:hover,
-li.people.active a,
-.post-content.people .title,
-.post-content.people .caption,
-.post-content.people h3 {
+.wrapper.people-main li.people a,
+.wrapper.people-main .post-content .title,
+.wrapper.people-main .post-content .caption,
+.wrapper.people-main .post-content h3 {
   color: #f185ce; }
 
 li.process a:hover,
-li.process.active a,
-.post-content.process .title,
-.post-content.process .caption,
-.post-content.process h3 {
+.wrapper.process-main li.process a,
+.wrapper.process-main .post-content .title,
+.wrapper.process-main .post-content .caption,
+.wrapper.process-main .post-content h3 {
   color: #c4e76a; }
 
 li.ideas a:hover,
-li.ideas.active a,
-.post-content.ideas .title,
-.post-content.ideas .caption,
-.post-content.ideas h3 {
+.wrapper.ideas-main li.ideas a,
+.wrapper.ideas-main .post-content .title,
+.wrapper.ideas-main .post-content .caption,
+.wrapper.ideas-main .post-content h3 {
   color: #f42434; }
 
 li.found a:hover,
-li.found.active a,
-.post-content.found .title,
-.post-content.found .caption,
-.post-content.found h3 {
+.wrapper.found-main li.found a,
+.wrapper.found-main .post-content .title,
+.wrapper.found-main .post-content .caption,
+.wrapper.found-main .post-content h3 {
   color: #9be6d7; }
 
 li.present a:hover,
-li.present.active a,
-.post-content.present .title,
-.post-content.present .caption,
-.post-content.present h3 {
+.wrapper.present-main li.present a,
+.wrapper.present-main .post-content .title,
+.wrapper.present-main .post-content .caption,
+.wrapper.present-main .post-content h3 {
   color: #ff9d6b; }
 
 li.studio a:hover,
-li.studio.active a,
-.post-content.studio .title,
-.post-content.studio .caption,
-.post-content.studio h3 {
+.wrapper.studio-main li.studio a,
+.wrapper.studio-main .post-content .title,
+.wrapper.studio-main .post-content .caption,
+.wrapper.studio-main .post-content h3 {
   color: #e3e733; }
 
 .sidebar h3 {
@@ -433,7 +439,7 @@ li.studio.active a,
   margin: 2em 0; }
 
 .post-content .images {
-  margin: 2em -10px;
+  margin: 1em -10px;
   float: left; }
 
 .post-content img {
@@ -443,13 +449,15 @@ li.studio.active a,
 .post-content .title-img {
   margin-bottom: 2em; }
 
-.post-content .text {
+.post-content .meta-data ul {
+  float: none;
+  width: auto; }
+
+.inner-content p, .inner-content ul, .inner-content .author {
+  margin: 0.5em 0;
+  line-height: 1.5;
   width: 90%;
   float: right; }
-
-.post-content p, .post-content ul {
-  margin: 1em 0;
-  line-height: 1.5; }
 
 .post-content a {
   color: #a7a9ac; }
@@ -556,7 +564,11 @@ nav .index:hover {
 footer {
   color: #999999;
   background: white;
-  padding: 1em 0; }
+  padding: 1em 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 footer > div {
   overflow: hidden; }
