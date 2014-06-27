@@ -236,7 +236,8 @@ li.studio a:hover,
   padding: 0; }
 
 .category-icons li {
-  display: inline-block; }
+  display: inline-block;
+  margin: 0 0.1em; }
 
 .category-icons a.tag, .category-links a:after {
   content: '';

@@ -23,8 +23,11 @@
 				<div class="date"><?php the_date('F j'); ?></div>
 				<div class="tags">
 					<ul class="category-icons">
-						<li class="out-and-about"><a class="tag" href="#"></a></li>
-						<li class="people"><a class="tag" href="#"></a></li>
+					<?php 
+						foreach((get_the_category()) as $category) { 
+						    echo "<li class='" . $category->slug . "'><a class='tag' href='" . get_category_link($category->term_id ) . "'></a></li>";
+						} 
+					?>
 					</ul>
 				</div>
 			</div>
@@ -32,9 +35,9 @@
 			<span class="author">Posted by <?php the_author_posts_link(); ?> </a></span>
 		</div>
 	</article>
-	<div class="pagination">a
-		<a class="prev" href="#">previous</a>
-		<a class="next" href="#">next</a>
+	<div class="pagination">
+		<span class="next"><?php next_post_link('%link', 'next'); ?></span>
+		<span class="prev"><?php previous_post_link('%link', 'previous'); ?></span>
 	</div>
 </div>
 

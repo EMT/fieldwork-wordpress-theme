@@ -8,6 +8,7 @@
 	<ul class="post-list">
 		
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+ <?php $postid = get_the_ID(); ?> 
 		<li>
 			<article class="post<?php the_category_unlinked(' '); ?>">
 				<a href="<?php the_permalink() ?>">
@@ -19,7 +20,6 @@
 						?>
 						<h5 class="category">Custom Category - Damn this will be 'fun' to impliment</h5>
 						<p><?php the_excerpt(); ?></p>
-						
 					</div>
 				</a>
 				<div class="post-meta-data">
@@ -27,8 +27,11 @@
 					<span class="title"><?php the_title(); ?> - <span class="title-long">Over The Rainbow</span></span>
 					<span class="go-to"><a href="/blog-post/"></a></span>
 					<ul class="category-icons">
-						<li class="studio"><a class="tag" href="#"></a></li>
-						<li class="people"><a class="tag" href="#"></a></li>
+					<?php 
+						foreach((get_the_category()) as $category) { 
+						    echo "<li class='" . $category->slug . "'><a class='tag' href='" . get_category_link($category->term_id ) . "'></a></li>";
+						} 
+					?>
 					</ul>
 				</div>
 			</article>
