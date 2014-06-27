@@ -1,6 +1,67 @@
 <?php
 
-// Add in default JS + CSS
+// DIE WORDPRESS FORMATING DIE IN A FIRE.
+
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
+// Add in Featured images
+
+add_theme_support( 'post-thumbnails' ); 
+
+// Add in Category classes.
+
+function the_category_unlinked($separator = ' ') {
+    $categories = (array) get_the_category();
+    
+    $thelist = '';
+    $i = 0;
+    foreach($categories as $category) {    // concate
+        $i++;
+
+        if ( $i === 1 ) {
+        $thelist .= $separator . $category->category_nicename . "-main";
+            } else {
+        $thelist .= $separator . $category->category_nicename;
+            }
+    }
+    
+    echo $thelist;
+}
+
+// Sidebar - clean up category names.
+
+add_filter('wp_list_categories', 'add_slug_css_list_categories');
+function add_slug_css_list_categories($list) {
+
+$cats = get_categories();
+    foreach($cats as $cat) {
+    $find = 'cat-item-' . $cat->term_id . '"';
+    $replace = $cat->slug . '"';
+    $list = str_replace( $find, $replace, $list );
+    $find = 'cat-item-' . $cat->term_id . ' ';
+    $replace = $cat->slug . ' ';
+    $list = str_replace( $find, $replace, $list );
+    }
+return $list;
+}
+
+// Remove heights and widths from images returned by wordpress.
+
+    // Remove inline width and height added to images.
+
+    add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+    add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+
+    // Removes attached image sizes as well.
+
+    add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
+    function remove_thumbnail_dimensions( $html ) {
+            $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+            return $html;
+    }
+
+// Add in default JS + CSS.
 
 function add_theme_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
@@ -9,9 +70,10 @@ function add_theme_scripts() {
     // wp_enqueue_script( 'core', get_template_directory_uri() . '/js/bootstrap.js', null, null, true);
 }
 
+
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
-// Remove useless junk from Wordpress header
+// Remove useless junk from Wordpress header.
 
 remove_action('wp_head', 'rsd_link'); // remove really simple discovery link
     remove_action('wp_head', 'wp_generator'); // remove wordpress version
