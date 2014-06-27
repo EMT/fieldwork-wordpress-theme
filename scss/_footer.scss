@@ -7,6 +7,10 @@ footer {
 	color: rgb(153,153,153);
 	background: rgb(255,255,255);
 	padding: 1em 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 footer > div {
 	overflow: hidden;

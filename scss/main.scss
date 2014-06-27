@@ -11,11 +11,18 @@
        url('fonts/neuzeit-book.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Neuzeit';
   color: rgb(109,110,113);
   background: rgb(239,239,239);
   margin-top: 5%;
+  position: relative;
+  min-height: 100%;
 }
 
 header > div,
