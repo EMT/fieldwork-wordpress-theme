@@ -7,9 +7,7 @@
 <div class="main-content">
 	<ul class="post-list">
 		
-		 <?php if (have_posts()) : ?>
-               <?php while (have_posts()) : the_post(); ?> 
-			
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<li>
 			<article class="post<?php the_category_unlinked(' '); ?>">
 				<a href="<?php the_permalink() ?>">
@@ -19,7 +17,7 @@
 								the_post_thumbnail();
 							} 
 						?>
-						<h5 class="category">Out And About</h5>
+						<h5 class="category">Custom Category - Damn this will be 'fun' to impliment</h5>
 						<p><?php the_excerpt(); ?></p>
 						
 					</div>
@@ -35,15 +33,13 @@
 				</div>
 			</article>
 		</li>
-
-		<?php endwhile; ?>
-     <?php endif; ?>
-
-	</ul>
+	<?php endwhile;?>
 	<div class="pagination">
-		<a class="prev" href="#">previous</a>
-		<a class="next" href="#">next</a>
+	<span class="next"><?php next_posts_link('next'); ?></span>
+	<span class="prev"><?php previous_posts_link('previous'); ?></span>
 	</div>
+	<?php endif; ?> 
+	</ul>
 </div>
 <?php get_sidebar(); ?>
 

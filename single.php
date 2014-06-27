@@ -37,8 +37,12 @@
 		<a class="next" href="#">next</a>
 	</div>
 </div>
+
 <?php endwhile ?>
+
 <?php endif ?>
+
+
 
 <?php get_sidebar(); ?>
 

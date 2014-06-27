@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 
 <div class="banner">
@@ -7,12 +8,7 @@
 <div class="main-content">
 	<ul class="post-list">
 		
-		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array('posts_per_page' => 3, 'paged' => $paged );
-query_posts($args); ?>
-		 <?php if (have_posts()) : ?>
-               <?php while (have_posts()) : the_post(); ?> 
-			
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<li>
 			<article class="post<?php the_category_unlinked(' '); ?>">
 				<a href="<?php the_permalink() ?>">
@@ -38,15 +34,13 @@ query_posts($args); ?>
 				</div>
 			</article>
 		</li>
-
-		<?php endwhile; ?>
-     <?php endif; ?>
-
-	</ul>
+	<?php endwhile;?>
 	<div class="pagination">
-		<a class="prev" href="#">previous</a>
-		<a class="next" href="#">next</a>
+	<span class="next"><?php next_posts_link('next'); ?></span>
+	<span class="prev"><?php previous_posts_link('previous'); ?></span>
 	</div>
+	<?php endif; ?> 
+	</ul>
 </div>
 <?php get_sidebar(); ?>
 

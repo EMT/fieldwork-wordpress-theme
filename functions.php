@@ -36,6 +36,24 @@ function the_category_unlinked($separator = ' ') {
     echo $thelist;
 }
 
+// Fixes Pagination on homepage ( wordpress hates home.php ).
+
+function my_post_queries( $query ) {
+     // do not alter the query on wp-admin pages and only alter it if it's the main query
+    if (!is_admin() && $query->is_main_query()){
+        // alter the query for the home and category pages 
+
+        if(is_home()){
+           $query->set('posts_per_page', 3);
+        }
+
+        if(is_category()){
+            $query->set('posts_per_page', 3);
+        }
+    }
+}
+add_action( 'pre_get_posts', 'my_post_queries' );
+
 // Sidebar - clean up category names.
 
 add_filter('wp_list_categories', 'add_slug_css_list_categories');
