@@ -31,5 +31,4 @@
 		</nav>
 	</div>
 </header>
-	
-<div class="wrapper<?php if(is_single()) { the_category_unlinked(' '); };?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
+<div class="wrapper <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">

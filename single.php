@@ -15,12 +15,12 @@
 				the_post_thumbnail();
 			} 
 			?>
-			<h5 class="category">Out And About</h5>
+			<h5 class="category"><?php echo get_cat_name( get_post_meta($post->ID, 'mob_category_prefered', true) ) ?></h5>
 			<p><?php the_excerpt(); ?></p>
 		</div>
 		<div class="inner-content">
 			<div class="meta-data">
-				<div class="date"><?php the_date('F j'); ?></div>
+				<div class="date"><?php the_time('F j'); ?></div>
 				<div class="tags">
 					<ul class="category-icons">
 					<?php 
@@ -31,6 +31,7 @@
 					</ul>
 				</div>
 			</div>
+			<h2 class="title"><?php the_title(); ?></h2><span class="title-long"><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?> - <?php echo get_post_meta($post->ID, 'title_long', true); ?><?php endif; ?></span>
 			<?php the_content(); ?>
 			<span class="author">Posted by <?php the_author_posts_link(); ?> </a></span>
 		</div>

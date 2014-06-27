@@ -18,13 +18,13 @@
 								the_post_thumbnail();
 							} 
 						?>
-						<h5 class="category">Custom Category - Damn this will be 'fun' to impliment</h5>
+						<h5 class="category"><?php echo get_cat_name( get_post_meta($post->ID, 'mob_category_prefered', true) ) ?></h5>
 						<p><?php the_excerpt(); ?></p>
 					</div>
 				</a>
 				<div class="post-meta-data">
-					<span class="date">June 5</span>
-					<span class="title"><?php the_title(); ?> - <span class="title-long">Over The Rainbow</span></span>
+					<span class="date"><?php the_time('F j'); ?></span>
+					<span class="title"><?php the_title(); ?><span class="title-long"><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?> - <?php echo get_post_meta($post->ID, 'title_long', true); ?><?php endif; ?></span></span>
 					<span class="go-to"><a href="/blog-post/"></a></span>
 					<ul class="category-icons">
 						<?php 
