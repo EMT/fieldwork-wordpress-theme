@@ -11,7 +11,6 @@
 	-->
 	<title><?php echo (wp_title('', false)) ? wp_title('', false) . ' – ' : ''; ?><?php bloginfo( 'name' ); ?></title>
 	<meta name="viewport" content="width=device-width">
-	<?php wp_enqueue_script('jquery'); ?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -33,4 +32,4 @@
 	</div>
 </header>
 	
-<div class="wrapper">
+<div class="wrapper<?php if(is_single()) { the_category_unlinked(' '); };?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
