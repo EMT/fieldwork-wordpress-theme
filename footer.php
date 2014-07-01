@@ -12,5 +12,20 @@
 		</div>
 	</footer>
 	<?php wp_footer(); ?>
+
+<script>
+
+$('#category').on('click', function() {
+if($('body').innerWidth() <= 650) {
+ if ( $( ".category-links" ).is( ':hidden' ) ) {
+    $( ".category-links" ).slideDown( 'slow' );
+  } else {
+    $( ".category-links" ).slideUp('slow');
+  }
+}
+});
+
+</script>
+
 </body>
 </html>

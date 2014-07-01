@@ -1,10 +1,8 @@
 
 <?php get_header(); ?>
 
-<div class="banner">
-	<h1>Experiments in Making Things</h1>
-</div>
 
+<?php get_sidebar(); ?>
 <div class="main-content">
 	<ul class="post-list">
 		
@@ -12,15 +10,16 @@
 		<li>
 			<article class="post<?php the_category_unlinked(' '); ?>">
 				<a href="<?php the_permalink() ?>">
+				<?php if ( has_post_thumbnail() ) { ?>
 					<div class="post-image">
-						<?php 
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail();
-							} 
-						?>
+					<?php the_post_thumbnail(); ?>
+					</div>
+				<?php } else { ?>
+					<div class="post-image no-image">
 						<h5 class="category"><?php echo get_cat_name( get_post_meta($post->ID, 'mob_category_prefered', true) ) ?></h5>
 						<p><?php the_excerpt(); ?></p>
 					</div>
+				<?php } ?>
 				</a>
 				<div class="post-meta-data">
 					<span class="date"><?php the_time('F j'); ?></span>

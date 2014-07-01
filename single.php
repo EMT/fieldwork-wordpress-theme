@@ -1,36 +1,37 @@
 <?php get_header(); ?>
 
 	
-<div class="banner">
+<!-- <div class="banner">
 	<h1>Experiments in Making Things</h1>
-</div>
-
+</div> -->
+<?php get_sidebar(); ?>
 <div class="main-content">
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
 	<article class="post-content">
-		<div class="post-image">
-			<?php 
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail();
-			} 
-			?>
-			<h5 class="category"><?php echo get_cat_name( get_post_meta($post->ID, 'mob_category_prefered', true) ) ?></h5>
-			<p><?php the_excerpt(); ?></p>
+		<?php if ( has_post_thumbnail() ) { ?>
+			<div class="post-image">
+			<?php the_post_thumbnail(); ?>
+			</div>
+		<?php } else { ?>
+			<div class="post-image no-image">
+				<h5 class="category"><?php echo get_cat_name( get_post_meta($post->ID, 'mob_category_prefered', true) ) ?></h5>
+				<p><?php the_excerpt(); ?></p>
+			</div>
+		<?php } ?>
+		<div class="meta-data">
+			<div class="date"><?php the_time('F j'); ?></div>
+			<div class="tags">
+				<ul class="category-icons">
+				<?php 
+					foreach((get_the_category()) as $category) { 
+					    echo "<li class='" . $category->slug . "'><a class='tag' href='" . get_category_link($category->term_id ) . "'></a></li>";
+					} 
+				?>
+				</ul>
+			</div>
 		</div>
 		<div class="inner-content">
-			<div class="meta-data">
-				<div class="date"><?php the_time('F j'); ?></div>
-				<div class="tags">
-					<ul class="category-icons">
-					<?php 
-						foreach((get_the_category()) as $category) { 
-						    echo "<li class='" . $category->slug . "'><a class='tag' href='" . get_category_link($category->term_id ) . "'></a></li>";
-						} 
-					?>
-					</ul>
-				</div>
-			</div>
 			<h2 class="title"><?php the_title(); ?></h2><span class="title-long"><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?> - <?php echo get_post_meta($post->ID, 'title_long', true); ?><?php endif; ?></span>
 			<?php the_content(); ?>
 			<span class="author">Posted by <?php the_author_posts_link(); ?> </a></span>
@@ -45,9 +46,5 @@
 <?php endwhile ?>
 
 <?php endif ?>
-
-
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
