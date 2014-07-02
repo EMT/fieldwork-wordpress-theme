@@ -514,7 +514,7 @@ li.studio a:hover,
 			top: 0px;
 		}
 
-		p, ul, .author, .gist, h3, h4, h5, ol {
+		p, ul, .author, h3, h4, h5, ol, blockquote, q {
 			margin: 0.5em 0;
 			line-height: 1.5;
 			width: 85%;
@@ -528,6 +528,11 @@ li.studio a:hover,
 
 		h5 {
 			font-size: 0.8em;
+		}
+
+		.gist {
+			width: 100%;
+			float: left;
 		}
 
 	}
@@ -607,7 +612,7 @@ li.studio a:hover,
 }
 
 .post-content .inner-content {
-	p, ul, .author, .gist, h3, h4, h5, ol {
+	p, ul, .author, h3, h4, h5, ol, blockquote, q {
 		width: 100%;
 		margin: 0.75em 0;
 		font-size: 0.95em;
@@ -619,6 +624,14 @@ li.studio a:hover,
 	margin-bottom: 1em;
 }
 
+.no-image {
+	height: auto;
+	padding: 5% 5% 20% 5%;
+}
+
+.post-content .gist {
+	font-size: 0.8em;
+}
 
 
 

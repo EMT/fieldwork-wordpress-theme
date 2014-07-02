@@ -199,7 +199,7 @@ footer .social {
 
 footer .social {
   text-align: right;
-  width: 50%;
+  width: 40%;
   float: right;
   padding: 1em 0; }
 
@@ -223,7 +223,7 @@ footer .social {
 
 footer div > p {
   float: left;
-  width: 50%;
+  width: 60%;
   margin: 1em 0; }
 
 li.code a.tag,
@@ -585,7 +585,7 @@ li.studio a:hover,
     position: absolute;
     left: 0px;
     top: 0px; }
-  .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content .gist, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol {
+  .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q {
     margin: 0.5em 0;
     line-height: 1.5;
     width: 85%;
@@ -594,6 +594,9 @@ li.studio a:hover,
     font-size: 0.9em; }
   .post-content .inner-content h5 {
     font-size: 0.8em; }
+  .post-content .inner-content .gist {
+    width: 100%;
+    float: left; }
 
 .images .image-col-3 {
   width: 33.33%;
@@ -646,14 +649,21 @@ li.studio a:hover,
   .category-links {
     display: none; }
 
-  .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content .gist, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol {
+  .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q {
     width: 100%;
     margin: 0.75em 0;
     font-size: 0.95em; }
 
   .post-content .meta-data {
     width: auto;
-    margin-bottom: 1em; } }
+    margin-bottom: 1em; }
+
+  .no-image {
+    height: auto;
+    padding: 5% 5% 20% 5%; }
+
+  .post-content .gist {
+    font-size: 0.8em; } }
 @media only screen and (max-width: 700px) {
   footer {
     font-size: 0.95em; }
