@@ -13,6 +13,75 @@ $blog-pale-green: rgb(227,231,51);
 
 // Category colors + backgrounds
 
+
+// ================= TEST CODE FOR MOBILE SIDEBAR - DO NOT MOVE ==================== //
+@media only screen and (max-width: 650px) {
+.wrapper {
+	width: 100% !important;
+}
+
+.sidebar {
+	position: absolute;
+	width: 65% !important;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: darken(white,3%);
+	transition: all 0.4s ease-in-out;
+	box-sizing: border-box;
+	padding: 2em;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+	margin-top: 3.1em !important;
+}
+
+html.open .sidebar {
+	right: 0;
+}
+
+body {
+	padding-bottom: 7em !important;
+}
+
+
+html.open .main-content {
+	right: 65%;
+}
+
+.main-content {
+	position: relative;
+	right: 0;
+	background: rgb(239, 239, 239);
+	width: 100%;
+	margin: 0;
+	padding: 2em 5%;
+	box-sizing: border-box;
+	transition: right 0.4s ease-in-out;
+}
+
+.main-content:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(170,170,170,0);
+	transition: background 0.4s ease-in-out;
+}
+
+html.open .main-content:after {
+	content: '';
+	bottom: 0;
+	background: rgba(100,100,100,0.8);
+}
+}
+// ============== END OF TEST CODE FOR MOBILE SIDEBAR - DO NOT MOVE ================== //
+
+
+
 // Background
 
 li.code a.tag,
@@ -196,11 +265,15 @@ li.studio a:hover,
 	h3:first-of-type {
 		padding-top: 0;
 	}
+}
 
-	.newsletter {
-		margin-top: 1em;
+.newsletter {
+	margin-top: 1em;
+	color: rgb(170,170,170);
+
+	p {
+		line-height: 1.5;
 	}
-
 }
 
 // Categories links 
@@ -230,7 +303,6 @@ li.studio a:hover,
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
@@ -262,16 +334,16 @@ li.studio a:hover,
 // Contact form ( modified old styles )
 
 .contact-form {
-	margin-bottom: 2em;
+	margin: 0.5em 0 1em 0;
 }
 .contact-form > div {
 	border-bottom: 1px solid rgb(170,170,170);
-	margin-bottom: 0.3em;
+	margin-bottom: 0.7em;
 }
 .contact-form input.text {
 	border: 0;
 	background: transparent;
-	padding: 0.7em 0;
+	padding: 0.3em;
 	color: rgb(111,124,124);
 	font-size: 1em;
 }
@@ -291,21 +363,31 @@ li.studio a:hover,
 }
 
 
+.category-links {
+	margin-bottom: 3.5em; 
+}
+
 
 // Posts lists
 
 .post-list {
 	padding: 0;
 	list-style: none;
+
+	.post-image, .no-image {
+		margin: 0 0 1em 0;
+	}
+
 }
 
 .post-list > li {
-	margin: 2em 0;
+	margin: 2.5em 0;
 }
 
 .post-list > li:first-of-type {
-	margin: 0 0 2em 0;
+	margin: 0 0 2.5em 0;
 }
+
 
 
 
@@ -333,6 +415,7 @@ li.studio a:hover,
 	padding: 5% 5% 57.4% 5%;
 	margin: 0 0 2em 0;
 	overflow: hidden;
+	background: rgb(170,170,170);
 
 	.category {
 		color: rgba(255,255,255,0.5);
@@ -347,6 +430,8 @@ li.studio a:hover,
 		line-height: 1.2;
 	}
 }
+
+
 
 // Post
 
@@ -470,9 +555,26 @@ li.studio a:hover,
 		margin: 0.2em 0;
 	}
 
+	.images-wrapper {
+		width: 120%;
+		float: right;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
 	.images {
-		margin: 1em -10px;
-		float: left;
+		margin: 1.5em -10px;
+		width: 100%;
+		float: right;
+				&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
 	}
 
 	.title-img {
@@ -490,9 +592,12 @@ li.studio a:hover,
 	}
 
 	.inner-content {
+	width: 85%;
+	float: right;
+	line-height: 1.5;
 		
-		h1, h2, h3, h4, h5, h6 {
-			margin: 1em 0;
+		h1, h2, h3, h4, h5, h6,p, ul, ol, blockquote, q, .author {
+			margin: 1.5em 0;
 		}
 
 		.title {
@@ -514,20 +619,14 @@ li.studio a:hover,
 			top: 0px;
 		}
 
-		p, ul, .author, h3, h4, h5, ol, blockquote, q {
-			margin: 0.5em 0;
-			line-height: 1.5;
-			width: 85%;
-			float: right;
-		}
-
-
 		h4 {
 			font-size: 0.9em;
+			margin: 1.5em 0 1em 0;
 		}
 
 		h5 {
 			font-size: 0.8em;
+			margin: 1.5em 0 1em 0;
 		}
 
 		.gist {
@@ -535,6 +634,10 @@ li.studio a:hover,
 			float: left;
 		}
 
+	}
+	
+	.author {
+		display: block;	
 	}
 
 }
@@ -558,9 +661,9 @@ li.studio a:hover,
 
 
 .image-col-1 {
-	float: left;
 	margin: 2em 0;
 	width: 100%;
+	float: left;
 }
 
 
@@ -592,6 +695,15 @@ li.studio a:hover,
 	font-size: 0.7em;
 }
 
+.post-content .images-wrapper {
+	width: 100%;
+	float: right;
+}
+
+.post-content .images {
+	width: auto;
+	float: none;
+}
 
 .main-content {
 	width: 100%;
@@ -602,18 +714,10 @@ li.studio a:hover,
 	width: 100%;
 }
 
-// Temp hiding style.
-.newsletter {
-	display: none;	
-}
-
-.category-links {
-	display: none;
-}
 
 .post-content .inner-content {
+	width: 100%;
 	p, ul, .author, h3, h4, h5, ol, blockquote, q {
-		width: 100%;
 		margin: 0.75em 0;
 		font-size: 0.95em;
 	}
@@ -632,8 +736,6 @@ li.studio a:hover,
 .post-content .gist {
 	font-size: 0.8em;
 }
-
-
 
 }
 
