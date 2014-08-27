@@ -4,6 +4,7 @@
 
 header {
 	background: rgb(255,255,255);
+	font-size: 0.875em;
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -35,12 +36,13 @@ header nav a {
 	display: block;
 	padding: 0 0.6em;
 	float: left;
+	transition: color 0.2s ease-out;
 }
 header nav a:hover,
 .work nav a.work,
 .us nav a.us,
 .journal nav a.journal {
-	border-bottom: 1px solid rgb(255,48,67);
+	color: rgb(255,48,67);
 }
 nav .search,
 nav .index {

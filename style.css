@@ -61,7 +61,8 @@ body {
   margin-top: 6em;
   position: relative;
   min-height: 100%;
-  padding-bottom: 6em; }
+  padding-bottom: 6em;
+  font-size: 16px; }
 
 header > div,
 footer > div,
@@ -87,6 +88,7 @@ footer > div,
 
 header {
   background: white;
+  font-size: 0.875em;
   position: fixed;
   left: 0;
   right: 0;
@@ -115,13 +117,14 @@ header nav a {
   border-bottom: 1px solid transparent;
   display: block;
   padding: 0 0.6em;
-  float: left; }
+  float: left;
+  transition: color 0.2s ease-out; }
 
 header nav a:hover,
 .work nav a.work,
 .us nav a.us,
 .journal nav a.journal {
-  border-bottom: 1px solid #ff3043; }
+  color: #ff3043; }
 
 nav .search,
 nav .index {
@@ -183,6 +186,7 @@ nav .index:hover {
 
 footer {
   color: #999999;
+  font-size: 0.875em;
   background: white;
   padding: 1em 0;
   position: absolute;
@@ -226,6 +230,58 @@ footer div > p {
   width: 60%;
   margin: 1em 0; }
 
+@media only screen and (max-width: 650px) {
+  .wrapper {
+    width: 100% !important; }
+
+  .sidebar {
+    position: absolute;
+    width: 65% !important;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f7f7f7;
+    transition: all 0.4s ease-in-out;
+    box-sizing: border-box;
+    padding: 2em; }
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 3.1em !important; }
+
+  html.open .sidebar {
+    right: 0; }
+
+  body {
+    padding-bottom: 7em !important; }
+
+  html.open .main-content {
+    right: 65%; }
+
+  .main-content {
+    position: relative;
+    right: 0;
+    background: #efefef;
+    width: 100%;
+    margin: 0;
+    padding: 2em 5%;
+    box-sizing: border-box;
+    transition: right 0.4s ease-in-out; }
+
+  .main-content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(170, 170, 170, 0);
+    transition: background 0.4s ease-in-out; }
+
+  html.open .main-content:after {
+    content: '';
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.8); } }
 li.code a.tag,
 li.code:hover a:after,
 .wrapper.code-main li.code a:after,
@@ -374,8 +430,12 @@ li.studio a:hover,
     font-size: 1.2em; }
   .sidebar h3:first-of-type {
     padding-top: 0; }
-  .sidebar .newsletter {
-    margin-top: 1em; }
+
+.newsletter {
+  margin-top: 1em;
+  color: #aaaaaa; }
+  .newsletter p {
+    line-height: 1.5; }
 
 .category-links a {
   text-decoration: none;
@@ -400,7 +460,6 @@ li.studio a:hover,
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .category-icons {
@@ -424,16 +483,16 @@ li.studio a:hover,
   position: absolute; }
 
 .contact-form {
-  margin-bottom: 2em; }
+  margin: 0.5em 0 1em 0; }
 
 .contact-form > div {
   border-bottom: 1px solid #aaaaaa;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.7em; }
 
 .contact-form input.text {
   border: 0;
   background: transparent;
-  padding: 0.7em 0;
+  padding: 0.3em;
   color: #6f7c7c;
   font-size: 1em; }
 
@@ -451,15 +510,20 @@ li.studio a:hover,
   cursor: pointer;
   color: #848484; }
 
+.category-links {
+  margin-bottom: 3.5em; }
+
 .post-list {
   padding: 0;
   list-style: none; }
+  .post-list .post-image, .post-list .no-image {
+    margin: 0 0 1em 0; }
 
 .post-list > li {
-  margin: 2em 0; }
+  margin: 2.5em 0; }
 
 .post-list > li:first-of-type {
-  margin: 0 0 2em 0; }
+  margin: 0 0 2.5em 0; }
 
 .title-long, .date {
   color: #a7a9ac;
@@ -478,7 +542,8 @@ li.studio a:hover,
   height: 0;
   padding: 5% 5% 57.4% 5%;
   margin: 0 0 2em 0;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #aaaaaa; }
   .no-image .category {
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
@@ -559,9 +624,21 @@ li.studio a:hover,
     margin-right: 5%; }
   .post-content .category-icons {
     margin: 0.2em 0; }
+  .post-content .images-wrapper {
+    width: 120%;
+    float: right; }
+    .post-content .images-wrapper:after {
+      content: '';
+      display: block;
+      clear: both; }
   .post-content .images {
-    margin: 1em -10px;
-    float: left; }
+    margin: 1.5em -10px;
+    width: 100%;
+    float: right; }
+    .post-content .images:after {
+      content: '';
+      display: block;
+      clear: both; }
   .post-content .title-img {
     margin-bottom: 2em; }
   .post-content .meta-data ul {
@@ -570,33 +647,36 @@ li.studio a:hover,
   .post-content .gist {
     font-size: 0.9em;
     margin: 2em 0; }
-  .post-content .inner-content h1, .post-content .inner-content h2, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content h6 {
-    margin: 1em 0; }
-  .post-content .inner-content .title {
-    display: inline-block;
-    margin: inherit; }
-  .post-content .inner-content li {
-    color: #a7a9ac;
-    margin: 0.7em 0;
-    position: relative;
-    padding: 0 0 0 0.8em; }
-  .post-content .inner-content li:after {
-    content: '-';
-    position: absolute;
-    left: 0px;
-    top: 0px; }
-  .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q {
-    margin: 0.5em 0;
-    line-height: 1.5;
+  .post-content .inner-content {
     width: 85%;
-    float: right; }
-  .post-content .inner-content h4 {
-    font-size: 0.9em; }
-  .post-content .inner-content h5 {
-    font-size: 0.8em; }
-  .post-content .inner-content .gist {
-    width: 100%;
-    float: left; }
+    float: right;
+    line-height: 1.5; }
+    .post-content .inner-content h1, .post-content .inner-content h2, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content h6, .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q, .post-content .inner-content .author {
+      margin: 1.5em 0; }
+    .post-content .inner-content .title {
+      display: inline-block;
+      margin: inherit; }
+    .post-content .inner-content li {
+      color: #a7a9ac;
+      margin: 0.7em 0;
+      position: relative;
+      padding: 0 0 0 0.8em; }
+    .post-content .inner-content li:after {
+      content: '-';
+      position: absolute;
+      left: 0px;
+      top: 0px; }
+    .post-content .inner-content h4 {
+      font-size: 0.9em;
+      margin: 1.5em 0 1em 0; }
+    .post-content .inner-content h5 {
+      font-size: 0.8em;
+      margin: 1.5em 0 1em 0; }
+    .post-content .inner-content .gist {
+      width: 100%;
+      float: left; }
+  .post-content .author {
+    display: block; }
 
 .images .image-col-3 {
   width: 33.33%;
@@ -611,9 +691,9 @@ li.studio a:hover,
   padding: 0 10px; }
 
 .image-col-1 {
-  float: left;
   margin: 2em 0;
-  width: 100%; }
+  width: 100%;
+  float: left; }
 
 .video-container {
   position: relative;
@@ -636,6 +716,14 @@ li.studio a:hover,
   .post-image {
     font-size: 0.7em; }
 
+  .post-content .images-wrapper {
+    width: 100%;
+    float: right; }
+
+  .post-content .images {
+    width: auto;
+    float: none; }
+
   .main-content {
     width: 100%;
     margin: 0; }
@@ -643,16 +731,11 @@ li.studio a:hover,
   .sidebar {
     width: 100%; }
 
-  .newsletter {
-    display: none; }
-
-  .category-links {
-    display: none; }
-
-  .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q {
-    width: 100%;
-    margin: 0.75em 0;
-    font-size: 0.95em; }
+  .post-content .inner-content {
+    width: 100%; }
+    .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q {
+      margin: 0.75em 0;
+      font-size: 0.95em; }
 
   .post-content .meta-data {
     width: auto;
