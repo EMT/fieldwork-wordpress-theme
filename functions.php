@@ -92,7 +92,8 @@ function add_theme_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_script( 'bquery', get_template_directory_uri() . '/js/jquery.min.js');
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js');
-    // wp_enqueue_script( 'core', get_template_directory_uri() . '/js/bootstrap.js', null, null, true);
+    wp_enqueue_script( 'touchSwipe', get_template_directory_uri() . '/js/jquery.touchSwipe.js');
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js');
 }
 
 
@@ -111,8 +112,6 @@ remove_action('wp_head', 'rsd_link'); // remove really simple discovery link
 
     remove_action('wp_head', 'start_post_rel_link', 10, 0); // remove random post link
     remove_action('wp_head', 'parent_post_rel_link', 10, 0); // remove parent post link
-    remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // remove the next and previous post links
-    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
     remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
