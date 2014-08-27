@@ -23,7 +23,7 @@
 				</a>
 				<div class="post-meta-data">
 					<span class="date"><?php the_time('F j'); ?></span>
-					<span class="title"><?php the_title(); ?><span class="title-long"><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?> - <?php echo get_post_meta($post->ID, 'title_long', true); ?><?php endif; ?></span></span>
+					<a href="<?php the_permalink() ?>"><h2 class="title"><?php the_title(); ?><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?><span class="title-long"> - <?php echo get_post_meta($post->ID, 'title_long', true); ?></span><?php endif; ?></h2></a>
 					<span class="go-to"><a href="<?php the_permalink() ?>"></a></span>
 					<ul class="category-icons">
 						<?php 
