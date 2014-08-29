@@ -15,24 +15,34 @@
 
 <script>
 
-// $('html').on('click', function() {
+	$(window).on('resize load', function() {
+		if ($(window).innerWidth()  <= 600) {
+			$("body").swipe("enable");
+			$("body").swipe( {
+					swipeLeft:function(event, fingerData, distance, duration) { 
+							$('html').addClass('open');
+							setTimeout(function(){
+								$('.sidebar').addClass('active');
+							},600);
+					},
+					swipeRight:function(event, fingerData, distance, duration) { 
+							$('html').removeClass('open');
+							setTimeout(function(){
+								$('.sidebar').removeClass('active');
+							},600);
+					},
+				 threshold:75
+			});
+		} else {
+			$("body").swipe("disable");
+		}
+	});
 
-// 	$(this).toggleClass('open');
-
-// });
-
-	$("body").swipe( {
-		swipeLeft:function(event, fingerData, distance, duration) { 
-			if ($(window).innerWidth()) {
-				$('html').addClass('open');
-			}
-		},
-		swipeRight:function(event, fingerData, distance, duration) { 
-			if ($(window).innerWidth()) {
-				$('html').removeClass('open');
-			}
-		},
-	 threshold:75
+	$('.main-content').on('click', function() {
+		if ($('.sidebar').hasClass('active')) {
+			$('html').removeClass('open');
+			$('.sidebar').removeClass('active');
+		}
 	});
 
 

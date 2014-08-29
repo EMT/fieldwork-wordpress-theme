@@ -236,7 +236,7 @@ footer div > p {
 
   .sidebar {
     position: absolute;
-    width: 65% !important;
+    width: 75% !important;
     right: 0;
     top: 0;
     bottom: 0;
@@ -256,8 +256,15 @@ footer div > p {
   body {
     padding-bottom: 7em !important; }
 
-  html.open .main-content {
-    right: 65%; }
+  html.open .main-content, html.open footer {
+    right: 75%;
+    left: auto;
+    cursor: pointer; }
+
+  footer {
+    transition: right 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    left: auto;
+    width: 100%; }
 
   .main-content {
     position: relative;
@@ -275,10 +282,8 @@ footer div > p {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background: rgba(170, 170, 170, 0);
-    transition: background 0.4s ease-in-out;
-    pointer-events: none; }
+    transition: background 0.4s ease-in-out; }
 
   html.open .main-content:after {
     content: '';
