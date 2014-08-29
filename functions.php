@@ -115,5 +115,56 @@ remove_action('wp_head', 'rsd_link'); // remove really simple discovery link
 
     remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
+// Post Images layout.
 
-?>
+function imageGallery($atts, $content = null) {
+    extract(shortcode_atts(array(
+     "id" => '0'
+    ), $atts));
+ 
+
+    $preWrapper = '<div class="images-wrapper"><div class="images">';
+ 
+    if( have_rows('image_gallery') ): while ( have_rows('image_gallery') ) : the_row();
+       
+            if( get_sub_field('id') == $id ) {
+
+                $cols = get_sub_field('cols');
+                $layout = $cols;
+
+                while( have_rows('images') ): the_row();
+
+                    if ( $cols == 'alt-layout') {
+                        $colCounter++;
+
+                        if ( $colCounter <= 2 ) {
+                            $layout = 2;
+                        } else {
+                            $layout = 3;
+                        }
+
+                    } else if ($cols == 'alt-layout-2') {
+                        $colCounter++;
+
+                        if ( $colCounter == 4 ) {
+                            $layout = 1;
+                        } else {
+                            $layout = 3;
+                        }
+
+                    }
+
+                    $output .='<div class="image-col-'.$layout.'"><img src="'.get_sub_field('image').'"/><span class="caption">'.get_sub_field('caption').'</span><span class="caption-alt">- '.get_sub_field('owner').'</span></div>';
+
+                endwhile;
+                
+            };
+        
+    endwhile; endif;
+ 
+    $postWrapper ='</div></div>';
+
+    return $preWrapper . $output . $postWrapper;
+}
+ 
+add_shortcode('images', 'imageGallery');
