@@ -6,7 +6,7 @@
 	<div class="newsletter">
 		<h3>Newsletter</h3>
 		<p>Good wholesome stuff, once a month or there abouts.</p>
-		<form action="" class="contact-form" >
+		<form action="#" class="contact-form" >
 			<div>
 				<label for="name">Name</label>
 				<input type="text" class="text" name="NAME" id="name">
