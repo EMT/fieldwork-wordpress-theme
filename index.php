@@ -7,3 +7,5 @@
 //	In for a penny, in for a pound!
 
 ?>
+
+<pre>Welcome to index.php</pre>
