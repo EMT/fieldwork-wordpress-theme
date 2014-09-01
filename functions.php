@@ -122,39 +122,73 @@ function imageGallery($atts, $content = null) {
      "id" => '0'
     ), $atts));
  
-
+    // Wrapper for the whole thing.
     $preWrapper = '<div class="images-wrapper"><div class="images">';
- 
+    
+    // Do we have any rows ?
     if( have_rows('image_gallery') ): while ( have_rows('image_gallery') ) : the_row();
        
+            // Do those rows have an ID matching the ID we set as an attribute?
             if( get_sub_field('id') == $id ) {
 
                 $cols = get_sub_field('cols');
                 $layout = $cols;
 
+                // Lets get all the images related to that ID.
                 while( have_rows('images') ): the_row();
 
-                    if ( $cols == 'alt-layout') {
-                        $colCounter++;
+                    $link = get_sub_field('image');
 
-                        if ( $colCounter <= 2 ) {
-                            $layout = 2;
-                        } else {
-                            $layout = 3;
-                        }
-
-                    } else if ($cols == 'alt-layout-2') {
-                        $colCounter++;
-
-                        if ( $colCounter == 4 ) {
-                            $layout = 1;
-                        } else {
-                            $layout = 3;
-                        }
-
+                    // Do we want a link with that image ?
+                    if ( get_sub_field('link') == 'true' ) {
+                        $preLinkWrapper = '<a href="'.$link.'"/>';
+                        $postLinkWrapper = '</a>';
+                    } else {
+                        $preLinkWrapper = '';
+                        $postLinkWrapper = '';
                     }
 
-                    $output .='<div class="image-col-'.$layout.'"><img src="'.get_sub_field('image').'"/><span class="caption">'.get_sub_field('caption').'</span><span class="caption-alt">- '.get_sub_field('owner').'</span></div>';
+                    // Does each image have a caption, if so show it.
+                    if ( get_sub_field('caption') ) {
+                        $caption = '<span class="caption">'.get_sub_field('caption').'</span>';
+                    } else {
+                        $caption = '';
+                    }
+
+                    // Does each image have another caption ( usually the owner ), if so show it.
+                    if ( get_sub_field('owner') ) {
+                        $captionAlt = '<span class="caption-alt">- '.get_sub_field('owner').'</span>';
+                    } else {
+                        $captionAlt = '';
+                    }
+
+                    //  Alternative more complex layouts
+
+                        if ( $cols == '2top-3bottom') {
+                            $colCounter++;
+                            if ( $colCounter <= 2 ) {
+                                $layout = 2;
+                            } else {
+                                $layout = 3;
+                            }
+                        } else if ($cols == '3top-1bottom') {
+                            $colCounter++;
+                            if ( $colCounter == 4 ) {
+                                $layout = 1;
+                            } else {
+                                $layout = 3;
+                            }
+                        } else if ($cols == '1top-2bottom') {
+                            $colCounter++;
+                            if ( $colCounter <= 1 ) {
+                                $layout = 1;
+                            } else {
+                                $layout = 2;
+                            }
+                        }
+
+                    // Outputting each image.
+                    $output .='<div class="image-col-'.$layout.'">'.$preLinkWrapper.'<img src="'.get_sub_field('image').'"/>'.$postLinkWrapper.$caption.$captionAlt.'</div>';
 
                 endwhile;
                 
@@ -162,9 +196,12 @@ function imageGallery($atts, $content = null) {
         
     endwhile; endif;
  
+    // Container for the images.
     $postWrapper ='</div></div>';
 
+    // Outputting the whole thing.
     return $preWrapper . $output . $postWrapper;
 }
- 
+
+// Dont forget the shortcode! 
 add_shortcode('images', 'imageGallery');
