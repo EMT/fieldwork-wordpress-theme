@@ -230,20 +230,24 @@ footer div > p {
   width: 60%;
   margin: 1em 0; }
 
-@media only screen and (max-width: 650px) {
+body {
+  font-size: 1em; }
+
+@media only screen and (max-width: 900px) {
   .wrapper {
     width: 100% !important; }
 
   .sidebar {
     position: absolute;
-    width: 75% !important;
+    width: 40% !important;
     right: 0;
     top: 0;
     bottom: 0;
     background: #f7f7f7;
     transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
     box-sizing: border-box;
-    padding: 2em; }
+    padding: 2em;
+    margin: 0 !important; }
 
   body {
     position: relative;
@@ -254,16 +258,17 @@ footer div > p {
     right: 0; }
 
   body {
-    padding-bottom: 7em !important; }
+    padding-bottom: 0em !important; }
 
   html.open .main-content, html.open footer {
-    right: 75%;
+    right: 40%;
     left: auto;
     cursor: pointer; }
 
   footer {
     transition: right 0.6s cubic-bezier(0.77, 0, 0.175, 1);
     left: auto;
+    position: relative !important;
     width: 100%; }
 
   .main-content {
@@ -289,6 +294,12 @@ footer div > p {
     content: '';
     bottom: 0;
     background: rgba(100, 100, 100, 0.8); } }
+@media only screen and (max-width: 600px) {
+  html.open .main-content, html.open footer {
+    right: 75%; }
+
+  .sidebar {
+    width: 75% !important; } }
 li.code a.tag,
 li.code:hover a:after,
 .wrapper.code-main li.code a:after,
@@ -353,6 +364,7 @@ li.code a:hover,
 .wrapper.code-main li.code a,
 .wrapper.code-main .post-content .title,
 .wrapper.code-main .post-content .caption,
+.wrapper.code-main .post-content h2,
 .wrapper.code-main .post-content h3,
 .wrapper.code-main .post-content h4 {
   color: #ee467b; }
@@ -361,6 +373,7 @@ li.inspiring a:hover,
 .wrapper.inspiring-main li.inspiring a,
 .wrapper.inspiring-main .post-content .title,
 .wrapper.inspiring-main .post-content .caption,
+.wrapper.inspiring-main .post-content h2,
 .wrapper.inspiring-main .post-content h3,
 .wrapper.inspiring-main .post-content h4 {
   color: #fedd3c; }
@@ -369,6 +382,7 @@ li.made a:hover,
 .wrapper.made-main li.made a,
 .wrapper.made-main .post-content .title,
 .wrapper.made-main .post-content .caption,
+.wrapper.made-main .post-content h2,
 .wrapper.made-main .post-content h3,
 .wrapper.made-main .post-content h4 {
   color: #3fd4ad; }
@@ -377,6 +391,7 @@ li.out-and-about a:hover,
 .wrapper.out-and-about-main li.out-and-about a,
 .wrapper.out-and-about-main .post-content .title,
 .wrapper.out-and-about-main .post-content .caption,
+.wrapper.out-and-about-main .post-content h2,
 .wrapper.out-and-about-main .post-content h3,
 .wrapper.out-and-about-main .post-content h4 {
   color: #0069a6; }
@@ -385,6 +400,7 @@ li.people a:hover,
 .wrapper.people-main li.people a,
 .wrapper.people-main .post-content .title,
 .wrapper.people-main .post-content .caption,
+.wrapper.people-main .post-content h2,
 .wrapper.people-main .post-content h3,
 .wrapper.people-main .post-content h4 {
   color: #f185ce; }
@@ -401,6 +417,7 @@ li.ideas a:hover,
 .wrapper.ideas-main li.ideas a,
 .wrapper.ideas-main .post-content .title,
 .wrapper.ideas-main .post-content .caption,
+.wrapper.ideas-main .post-content h2,
 .wrapper.ideas-main .post-content h3,
 .wrapper.ideas-main .post-content h4 {
   color: #f42434; }
@@ -409,6 +426,7 @@ li.found a:hover,
 .wrapper.found-main li.found a,
 .wrapper.found-main .post-content .title,
 .wrapper.found-main .post-content .caption,
+.wrapper.found-main .post-content h2,
 .wrapper.found-main .post-content h3,
 .wrapper.found-main .post-content h4 {
   color: #9be6d7; }
@@ -417,6 +435,7 @@ li.present a:hover,
 .wrapper.present-main li.present a,
 .wrapper.present-main .post-content .title,
 .wrapper.present-main .post-content .caption,
+.wrapper.present-main .post-content h2,
 .wrapper.present-main .post-content h3,
 .wrapper.present-main .post-content h4 {
   color: #ff9d6b; }
@@ -425,6 +444,7 @@ li.studio a:hover,
 .wrapper.studio-main li.studio a,
 .wrapper.studio-main .post-content .title,
 .wrapper.studio-main .post-content .caption,
+.wrapper.studio-main .post-content h2,
 .wrapper.studio-main .post-content h3,
 .wrapper.studio-main .post-content h4 {
   color: #e3e733; }
@@ -538,7 +558,7 @@ li.studio a:hover,
 
 .post-image {
   position: relative;
-  margin: 0 0 2em 0;
+  margin: 0 0 3em 0;
   overflow: hidden; }
   .post-image img {
     width: 100%;
@@ -548,7 +568,7 @@ li.studio a:hover,
   position: relative;
   height: 0;
   padding: 5% 5% 57.4% 5%;
-  margin: 0 0 2em 0;
+  margin: 0 0 3em 0;
   overflow: hidden;
   background: #aaaaaa; }
   .no-image .category {
@@ -605,6 +625,11 @@ li.studio a:hover,
 
 .post-content {
   margin-bottom: 2em; }
+  .post-content .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 85%;
+    float: right; }
   .post-content a {
     color: #a7a9ac; }
   .post-content em {
@@ -631,19 +656,17 @@ li.studio a:hover,
   .post-content .category-icons {
     margin: 0.2em 0; }
   .post-content .images-wrapper {
-    width: 120%;
+    width: 117.6%;
     float: right; }
     .post-content .images-wrapper:after {
       content: '';
-      display: block;
+      display: table;
       clear: both; }
   .post-content .images {
-    margin: 1.5em -10px;
-    width: 100%;
-    float: right; }
+    margin: 1.5em -10px; }
     .post-content .images:after {
       content: '';
-      display: block;
+      display: table;
       clear: both; }
   .post-content .title-img {
     margin-bottom: 2em; }
@@ -656,7 +679,8 @@ li.studio a:hover,
   .post-content .inner-content {
     width: 85%;
     float: right;
-    line-height: 1.5; }
+    line-height: 1.65;
+    margin-top: 1.5em; }
     .post-content .inner-content h1, .post-content .inner-content h2, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content h6, .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q, .post-content .inner-content .author {
       margin: 1.5em 0; }
     .post-content .inner-content .title {
@@ -672,12 +696,17 @@ li.studio a:hover,
       position: absolute;
       left: 0px;
       top: 0px; }
+    .post-content .inner-content h2 {
+      font-size: 1.4em; }
+    .post-content .inner-content h3 {
+      font-size: 1.3em; }
+    .post-content .inner-content h3 a {
+      text-decoration: none;
+      margin-left: 0.3em; }
     .post-content .inner-content h4 {
-      font-size: 0.9em;
-      margin: 1.5em 0 1em 0; }
+      font-size: 1.2em; }
     .post-content .inner-content h5 {
-      font-size: 0.8em;
-      margin: 1.5em 0 1em 0; }
+      font-size: 1.1em; }
     .post-content .inner-content .gist {
       width: 100%;
       float: left; }
@@ -744,8 +773,8 @@ li.studio a:hover,
   .post-content .inner-content {
     width: 100%; }
     .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content .author, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q {
-      margin: 0.75em 0;
-      font-size: 0.95em; }
+      margin: 1em 0;
+      font-size: 1em; }
 
   .post-content .meta-data {
     width: auto;
@@ -756,7 +785,36 @@ li.studio a:hover,
     padding: 5% 5% 20% 5%; }
 
   .post-content .gist {
-    font-size: 0.8em; } }
+    font-size: 0.8em; }
+
+  .post-content .title {
+    margin-bottom: 0.5em;
+    width: 100%; }
+
+  .post-content .meta-data {
+    margin-bottom: -0.5em; }
+
+  .post-image, .no-image {
+    margin-bottom: 1em; }
+
+  .post-content .images {
+    margin: 0 -10px; }
+
+  .image-col-3, .image-col-2, .image-col-1 {
+    width: 100% !important;
+    margin-bottom: 1em !important; }
+
+  .post-content .inner-content h1, .post-content .inner-content h2, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content h6, .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q, .post-content .inner-content .author {
+    margin: 1em 0; }
+
+  .post-content .inner-content li {
+    margin: 0.3em 0; }
+
+  .pagination span a {
+    padding: 0; }
+
+  .pagination span {
+    margin: 0; } }
 @media only screen and (max-width: 700px) {
   footer {
     font-size: 0.95em; }
