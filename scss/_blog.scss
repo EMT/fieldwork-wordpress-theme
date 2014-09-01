@@ -541,7 +541,7 @@ li.studio a:hover,
 
 // Single Post
 
-.post-content:after, .images:after, .sidebar:after, .wrapper:after, .post-meta-data:after {
+img:after, .post-content:after, .images:after, .sidebar:after, .wrapper:after, .post-meta-data:after {
 	content: '';
 	display: block;
 	clear: both;
@@ -614,12 +614,18 @@ li.studio a:hover,
 	}
 
 	.images {
-		margin: 1.5em -10px;
+		margin: 0.5em -10px;
 			&:after {
 			content: '';
 			display: table;
 			clear: both;
 		}
+	}
+
+	.inner-content p > img, .inner-content p a > img {
+		width: 117.6%;
+		float: right;
+		margin: 0 0 0.75em 0;
 	}
 
 	.title-img {
@@ -643,7 +649,7 @@ li.studio a:hover,
 	margin-top: 1.5em;
 		
 		h1, h2, h3, h4, h5, h6,p, ul, ol, blockquote, q, .author {
-			margin: 1.5em 0;
+			margin: 1em 0;
 		}
 
 		.title {
@@ -666,11 +672,11 @@ li.studio a:hover,
 		}
 
 		h2 {
-			font-size: 1.4em;
+			font-size: 1.3em;
 		}
 
 		h3 {
-			font-size: 1.3em;
+			font-size: 1.1em;
 		}
 
 		h3 a {
@@ -679,12 +685,9 @@ li.studio a:hover,
 		}
 
 		h4 {
-			font-size: 1.2em;
+			font-size: 1em;
 		}
 
-		h5 {
-			font-size: 1.1em;
-		}
 
 		.gist {
 			width: 100%;

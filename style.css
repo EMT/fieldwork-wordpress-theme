@@ -618,7 +618,7 @@ li.studio a:hover,
 .pagination .prev {
   float: left; }
 
-.post-content:after, .images:after, .sidebar:after, .wrapper:after, .post-meta-data:after {
+img:after, .post-content:after, .images:after, .sidebar:after, .wrapper:after, .post-meta-data:after {
   content: '';
   display: block;
   clear: both; }
@@ -663,11 +663,15 @@ li.studio a:hover,
       display: table;
       clear: both; }
   .post-content .images {
-    margin: 1.5em -10px; }
+    margin: 0.5em -10px; }
     .post-content .images:after {
       content: '';
       display: table;
       clear: both; }
+  .post-content .inner-content p > img, .post-content .inner-content p a > img {
+    width: 117.6%;
+    float: right;
+    margin: 0 0 0.75em 0; }
   .post-content .title-img {
     margin-bottom: 2em; }
   .post-content .meta-data ul {
@@ -682,7 +686,7 @@ li.studio a:hover,
     line-height: 1.65;
     margin-top: 1.5em; }
     .post-content .inner-content h1, .post-content .inner-content h2, .post-content .inner-content h3, .post-content .inner-content h4, .post-content .inner-content h5, .post-content .inner-content h6, .post-content .inner-content p, .post-content .inner-content ul, .post-content .inner-content ol, .post-content .inner-content blockquote, .post-content .inner-content q, .post-content .inner-content .author {
-      margin: 1.5em 0; }
+      margin: 1em 0; }
     .post-content .inner-content .title {
       display: inline-block;
       margin: inherit; }
@@ -697,16 +701,14 @@ li.studio a:hover,
       left: 0px;
       top: 0px; }
     .post-content .inner-content h2 {
-      font-size: 1.4em; }
-    .post-content .inner-content h3 {
       font-size: 1.3em; }
+    .post-content .inner-content h3 {
+      font-size: 1.1em; }
     .post-content .inner-content h3 a {
       text-decoration: none;
       margin-left: 0.3em; }
     .post-content .inner-content h4 {
-      font-size: 1.2em; }
-    .post-content .inner-content h5 {
-      font-size: 1.1em; }
+      font-size: 1em; }
     .post-content .inner-content .gist {
       width: 100%;
       float: left; }
