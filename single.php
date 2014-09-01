@@ -8,8 +8,13 @@
 <div class="main-content">
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
-	<article class="post-content">
-		<?php if ( has_post_thumbnail() ) { ?>
+	<article class="post-content <?php if (get_field('no_header') == '1' ) { ?>title-spacing<?php } ?>">
+	<?php if (get_field('no_header') == false ) { ?>
+		<?php if ( the_field('header_image') ) { ?>
+			<div class="post-image">
+			<img src="<?php the_field('header_image'); ?>">
+			</div>
+		<?php } else if ( has_post_thumbnail() ) { ?>
 			<div class="post-image">
 			<?php the_post_thumbnail(); ?>
 			</div>
@@ -19,6 +24,8 @@
 				<p><?php the_excerpt(); ?></p>
 			</div>
 		<?php } ?>
+	<?php } ?>
+		<div class="title"><h1><?php the_title(); ?></h1><span class="title-long"><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?> - <?php echo get_post_meta($post->ID, 'title_long', true); ?><?php endif; ?></span></div>
 		<div class="meta-data">
 			<div class="date"><?php the_time('F j'); ?></div>
 			<div class="tags">
@@ -32,9 +39,8 @@
 			</div>
 		</div>
 		<div class="inner-content">
-			<h2 class="title"><?php the_title(); ?></h2><span class="title-long"><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?> - <?php echo get_post_meta($post->ID, 'title_long', true); ?><?php endif; ?></span>
 			<?php the_content(); ?>
-			<span class="author">Posted by <?php the_author_posts_link(); ?> </a></span>
+			<span class="author">Posted by <?php the_author_posts_link(); ?></span>
 		</div>
 	</article>
 	<div class="pagination">
