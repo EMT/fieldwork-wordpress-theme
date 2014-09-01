@@ -16,7 +16,7 @@
 <script>
 
 	$(window).on('resize load', function() {
-		if ($(window).innerWidth()  <= 600) {
+		if ($(window).innerWidth()  <= 900) {
 			$("body").swipe("enable");
 			$("body").swipe( {
 					swipeLeft:function(event, fingerData, distance, duration) { 
