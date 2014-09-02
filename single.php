@@ -10,9 +10,9 @@
 <?php while (have_posts()) : the_post(); ?>
 	<article class="post-content <?php if (get_field('no_header') == '1' ) { ?>title-spacing<?php } ?>">
 	<?php if (get_field('no_header') == false ) { ?>
-		<?php if ( the_field('header_image') ) { ?>
+		<?php if ( get_field('header_image') ) { ?>
 			<div class="post-image">
-			<img src="<?php the_field('header_image'); ?>">
+				<img src="<?php the_field('header_image'); ?>">
 			</div>
 		<?php } else if ( has_post_thumbnail() ) { ?>
 			<div class="post-image">
