@@ -46,38 +46,7 @@
 }
 
 
-// TYPOGRAPHY 
-.title h1, .title span {
-	display: inline;
-}
-
 .post-content {
-	margin-bottom: 2em;
-
-	.title {
-		font-size: 1.5em;
-		font-weight: bold;
-		width: 85%;
-		float: right;
-	}
-
-	a {
-		color: rgb(167,169,172);
-	}
-
-	em {
-		font-style: italic;
-	}
-
-	strong {
-		font-weight: bold;
-	}
-
-	blockquote, q {
-		margin-left: 2em;
-		border-left: 3px solid rgb(204, 204, 204);
-		padding-left: 1em;
-	}
 
 	img {
 		margin-bottom: 0.5em;
@@ -85,15 +54,6 @@
 		display: block;
 	}
 
-	// !!! Group up with image styles
-	.caption, .caption-alt {
-		font-size: 0.9em;
-	}
-
-	.caption-alt {
-		color: rgb(167, 169, 172);
-		display: block;
-	}
 
 	.meta-data {
 		float: left;
@@ -140,57 +100,16 @@
 		width: auto;
 	}
 
-	.gist {
-		font-size: 0.9em;
-		margin: 2em 0;
-	}
-
 	.inner-content {
 	width: 85%;
 	float: right;
 	line-height: 1.65;
 	margin-top: 0.5em;
-		
-		h1, h2, h3, h4, h5, h6,p, ul, ol, blockquote, q, .author {
-			margin: 1em 0;
-		}
 
 		.title {
 			display: inline-block;
 			margin: inherit;
 		}
-
-		li {
-			color: rgb(167,169,172);
-			margin: 0.7em 0;
-			position: relative;
-			padding: 0 0 0 0.8em;
-		}
-
-		li:after {
-			content: '-';
-			position: absolute;
-			left: 0px;
-			top: 0px;
-		}
-
-		h2 {
-			font-size: 1.3em;
-		}
-
-		h3 {
-			font-size: 1.1em;
-		}
-
-		h3 a {
-			text-decoration: none;
-			margin-left: 0.3em;
-		}
-
-		h4 {
-			font-size: 1em;
-		}
-
 
 		.gist {
 			width: 100%;
@@ -252,14 +171,9 @@
 	width: 100%;
 }
 
-
 .post-content .inner-content {
 	width: 100%;
 	margin-top: 0.5em;
-	p, ul, .author, h3, h4, h5, ol, blockquote, q {
-		margin: 1em 0;
-		font-size: 1em;
-	}
 }
 
 .post-content .meta-data {
@@ -270,10 +184,6 @@
 .no-image {
 	height: auto;
 	padding: 5% 5% 20% 5%;
-}
-
-.post-content .gist {
-	font-size: 0.8em;
 }
 
 .post-content .title {
@@ -298,33 +208,11 @@
 	margin-bottom: 1em !important;
 }
 
-.post-content .inner-content {
-	h1, h2, h3, h4, h5, h6,p, ul, ol, blockquote, q, .author {
-			margin: 1em 0;
-	}
-}
-
+// Inline images
 .post-content .inner-content p > img, .post-content .inner-content p a > img {
 	width: 100%;
 	float: none;
 	margin: 0 0 0.75em 0;
-}
-
-
-.post-content .inner-content li {
-	margin: 0.3em 0;	
-}
-
-.post-content .inner-content {
-	margin-top: 1.5em;
-}
-
-.pagination span a {
-	padding: 0;
-}
-
-.pagination span{
-	margin: 0;
 }
 
 
