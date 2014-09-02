@@ -8,7 +8,7 @@
 				<li><a class="" href="https://github.com/EMT">Github</a></li>
 				<li><a class="" href="http://vimeo.com/madebyfieldwork">Vimeo</a></li>
 			</ul>
-			<p>22 Lever St Manchester M1 1EA | hello@madebyfieldwork.com | 0161 235 5318</p>
+			<p>22 Lever St Manchester M1 1EA | hello@madebyfieldwork.com | <a href="tel:01612355318">0161 235 5318</a></p>
 		</div>
 	</footer>
 
