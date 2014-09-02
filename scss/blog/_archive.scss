@@ -1,0 +1,83 @@
+
+// Posts lists
+
+.post-list {
+	padding: 0;
+	list-style: none;
+
+	.post-image, .no-image {
+		margin: 0 0 1em 0;
+	}
+
+}
+
+.post-list > li {
+	margin: 2.5em 0;
+}
+
+.post-list > li:first-of-type {
+	margin: 0 0 2.5em 0;
+}
+
+.pagination {
+
+	a {
+		text-decoration: none;
+		color: rgb(167,169,172);
+		padding: 2em 0;
+	}
+
+	span {
+		display: block;
+		margin: 1em 0 3em 0;
+	}
+
+	.next {
+		float: right;
+	}
+
+	.prev {
+		float: left;
+	}
+
+}
+
+// Shared between Single + Post list
+
+.title-long, .date {
+	color: rgb(167,169,172);
+	line-height: 1.2;
+}
+
+.post-image {
+	position: relative;
+	margin: 0 0 3em 0;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		display: block;
+	}
+}
+
+.no-image {
+	position: relative;
+	height: 0;
+	padding: 5% 5% 57.4% 5%;
+	margin: 0 0 3em 0;
+	overflow: hidden;
+	background: rgb(170,170,170);
+
+	.category {
+		color: rgba(255,255,255,0.5);
+		margin: 0;
+		font-size: 2em;
+	}
+
+	p {
+		color: rgb(255,255,255);
+		margin: 0.5em 0;
+		font-size: 1.3em;
+		line-height: 1.2;
+	}
+}

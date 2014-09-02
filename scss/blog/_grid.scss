@@ -1,0 +1,25 @@
+// !!! Group up with caption - little note on how dey be used.
+.images .image-col-3 {
+	width: 33.33%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+.images .image-col-2 {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+
+.image-col-1 {
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}

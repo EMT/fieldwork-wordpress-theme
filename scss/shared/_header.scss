@@ -19,9 +19,16 @@ header {
 	border-bottom-color: rgb(0,207,202);
 }
 
-header .marque img {
+header .marque {
     margin-top: 0.85em;
     height: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+header .marque img {
+	position: absolute;
+	height: 100%;
 }
 
 header nav {
