@@ -1,134 +1,14 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 650px) {
-
-.post-image {
-	font-size: 0.7em;
-}
-
-.post-content .images-wrapper {
-	width: 100%;
-	float: right;
-}
-
-.post-content .images {
-	width: auto;
-	float: none;
-}
-
-.main-content {
-	width: 100%;
-	margin: 0;
-}
-
-.sidebar {
-	width: 100%;
-}
-
-
-.post-content .inner-content {
-	width: 100%;
-	margin-top: 0.5em;
-	p, ul, .author, h3, h4, h5, ol, blockquote, q {
-		margin: 1em 0;
-		font-size: 1em;
-	}
-}
-
-.post-content .meta-data {
-	width: auto;
-	margin-bottom: 1em;
-}
-
-.no-image {
-	height: auto;
-	padding: 5% 5% 20% 5%;
-}
-
-.post-content .gist {
-	font-size: 0.8em;
-}
-
-.post-content .title {
-	margin-bottom: 0.75em;
-	width: 100%;
-}
-
-.post-content .meta-data {
-	margin-bottom: -0.5em;
-}
-
-.post-image, .no-image {
-	margin-bottom: 	1.4em;
-}
-
-.post-content .images {
-	margin: 0 -10px;
-}
-
-.image-col-3, .image-col-2, .image-col-1 {
-	width: 100% !important;
-	margin-bottom: 1em !important;
-}
-
-.post-content .inner-content {
-	h1, h2, h3, h4, h5, h6,p, ul, ol, blockquote, q, .author {
-			margin: 1em 0;
-	}
-}
-
-.post-content .inner-content p > img, .post-content .inner-content p a > img {
-	width: 100%;
-	float: none;
-	margin: 0 0 0.75em 0;
-}
-
-
-.post-content .inner-content li {
-	margin: 0.3em 0;	
-}
-
-.post-content .inner-content {
-	margin-top: 1.5em;
-}
-
-.pagination span a {
-	padding: 0;
-}
-
-.pagination span{
-	margin: 0;
-}
-
-
-}
-
-
-
 @media only screen and (max-width: 900px) {
 
 .post-image {
 	font-size: 0.85em;
 }
 
-html {
-	height: 100%;
+html, body,  .wrapper {
+	// height: 100%;
 }
 
-body, .sidebar, .main-content, .wrapper {
+.sidebar, .main-content {
 	min-height: 100%;
 }
 
