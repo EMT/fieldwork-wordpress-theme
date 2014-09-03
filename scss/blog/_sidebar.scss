@@ -2,6 +2,11 @@
 // ================= TEST CODE FOR MOBILE SIDEBAR ==================== //
 // A lot of this is a hacky mess for testing ideas.
 
+// Lets move the open class to the wrapper ?
+// Some styles are now irrelivent and need to be pruned.
+// Get rid of the important's / Get rid of the need for important's.
+// Consolodate some styles together.
+
 @media only screen and (max-width: 900px) {
 	.wrapper {
 		width: 100% !important;
@@ -18,8 +23,9 @@
 		box-sizing: border-box;
 		padding: 2em;
 		margin: 0 !important;
-		overflow: scroll;
+		overflow-y: scroll;
 		-webkit-transform: translate3d(0, 0, 0);
+		padding-top: 5.1em !important;
 	}
 
 	body {
@@ -36,11 +42,27 @@
 		padding-bottom: 0em !important;
 	}
 
+	
+	html.open, html.open body, html.open .wrapper {
+	    overflow: hidden; 
+	}
+
+	html.open .wrapper {
+		height: 100%;
+	    width: 100%;
+	}
 
 	html.open .main-content, html.open footer {
 		right: 40%;
 		left: auto;
 		cursor: pointer;
+		overflow: hidden;
+	}
+
+	html.open {
+		.sidebar {
+			-webkit-overflow-scrolling: touch;
+		}
 	}
 
 	footer {
