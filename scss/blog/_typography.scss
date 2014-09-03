@@ -35,12 +35,6 @@
 		padding-left: 1em;
 	}
 
-	img {
-		margin-bottom: 0.5em;
-		width: 100%;
-		display: block;
-	}
-
 	// !!! Group up with image styles
 	.caption, .caption-alt {
 		font-size: 0.9em;
@@ -49,51 +43,6 @@
 	.caption-alt {
 		color: rgb(167, 169, 172);
 		display: block;
-	}
-
-	.meta-data {
-		float: left;
-		width: 10%;
-		margin-right: 5%;
-	}
-
-	.category-icons {
-		margin: 0.2em 0;
-	}
-
-	.images-wrapper {
-		width: 117.6%;
-		float: right;
-
-		&:after {
-			content: '';
-			display: table;
-			clear: both;
-		}
-	}
-
-	.images {
-		margin: 0.5em -10px;
-			&:after {
-			content: '';
-			display: table;
-			clear: both;
-		}
-	}
-
-	.inner-content p > img, .inner-content p a > img {
-		width: 117.6%;
-		float: right;
-		margin: 0 0 0.75em 0;
-	}
-
-	.title-img {
-		margin-bottom: 2em;
-	}
-
-	.meta-data ul {
-		float: none;
-		width: auto;
 	}
 
 	.gist {
@@ -106,16 +55,6 @@
 	}
 
 	.inner-content {
-	width: 85%;
-	float: right;
-	line-height: 1.65;
-	margin-top: 0.5em;
-	
-
-		.title {
-			display: inline-block;
-			margin: inherit;
-		}
 
 		li {
 			color: rgb(167,169,172);

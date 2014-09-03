@@ -663,75 +663,35 @@ li.studio a:hover,
     margin-left: 2em;
     border-left: 3px solid #cccccc;
     padding-left: 1em; }
-  .post-content img {
-    margin-bottom: 0.5em;
-    width: 100%;
-    display: block; }
   .post-content .caption, .post-content .caption-alt {
     font-size: 0.9em; }
   .post-content .caption-alt {
     color: #a7a9ac;
     display: block; }
-  .post-content .meta-data {
-    float: left;
-    width: 10%;
-    margin-right: 5%; }
-  .post-content .category-icons {
-    margin: 0.2em 0; }
-  .post-content .images-wrapper {
-    width: 117.6%;
-    float: right; }
-    .post-content .images-wrapper:after {
-      content: '';
-      display: table;
-      clear: both; }
-  .post-content .images {
-    margin: 0.5em -10px; }
-    .post-content .images:after {
-      content: '';
-      display: table;
-      clear: both; }
-  .post-content .inner-content p > img, .post-content .inner-content p a > img {
-    width: 117.6%;
-    float: right;
-    margin: 0 0 0.75em 0; }
-  .post-content .title-img {
-    margin-bottom: 2em; }
-  .post-content .meta-data ul {
-    float: none;
-    width: auto; }
   .post-content .gist {
     font-size: 0.9em;
     margin: 2em 0; }
   .post-content .inner-content > * {
     margin: 1em 0; }
-  .post-content .inner-content {
-    width: 85%;
-    float: right;
-    line-height: 1.65;
-    margin-top: 0.5em; }
-    .post-content .inner-content .title {
-      display: inline-block;
-      margin: inherit; }
-    .post-content .inner-content li {
-      color: #a7a9ac;
-      margin: 0.7em 0;
-      position: relative;
-      padding: 0 0 0 0.8em; }
-    .post-content .inner-content li:after {
-      content: '-';
-      position: absolute;
-      left: 0px;
-      top: 0px; }
-    .post-content .inner-content h2 {
-      font-size: 1.3em; }
-    .post-content .inner-content h3 {
-      font-size: 1.1em; }
-    .post-content .inner-content h3 a {
-      text-decoration: none;
-      margin-left: 0.3em; }
-    .post-content .inner-content h4 {
-      font-size: 1em; }
+  .post-content .inner-content li {
+    color: #a7a9ac;
+    margin: 0.7em 0;
+    position: relative;
+    padding: 0 0 0 0.8em; }
+  .post-content .inner-content li:after {
+    content: '-';
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+  .post-content .inner-content h2 {
+    font-size: 1.3em; }
+  .post-content .inner-content h3 {
+    font-size: 1.1em; }
+  .post-content .inner-content h3 a {
+    text-decoration: none;
+    margin-left: 0.3em; }
+  .post-content .inner-content h4 {
+    font-size: 1em; }
 
 @media only screen and (max-width: 650px) {
   .post-content .gist {
