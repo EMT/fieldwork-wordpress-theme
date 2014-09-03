@@ -148,20 +148,6 @@
 
 @media only screen and (max-width: 650px) {
 
-.post-image {
-	font-size: 0.7em;
-}
-
-.post-content .images-wrapper {
-	width: 100%;
-	float: right;
-}
-
-.post-content .images {
-	width: auto;
-	float: none;
-}
-
 .main-content {
 	width: 100%;
 	margin: 0;
@@ -179,6 +165,10 @@
 .post-content .meta-data {
 	width: auto;
 	margin-bottom: 1em;
+}
+
+.post-content .images-wrapper {
+	width: 100%;
 }
 
 .no-image {
@@ -200,12 +190,7 @@
 }
 
 .post-content .images {
-	margin: 0 -10px;
-}
-
-.image-col-3, .image-col-2, .image-col-1 {
-	width: 100% !important;
-	margin-bottom: 1em !important;
+	margin: 0;
 }
 
 // Inline images
