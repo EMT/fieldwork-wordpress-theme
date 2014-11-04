@@ -18,9 +18,15 @@
 <header>
 	<div>
 		<a class="marque" href="/">
-			<!-- <img class="white-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo-white.svg" alt="Fieldwork – Home" /> -->
+			<img class="white-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo-white.svg" alt="Fieldwork – Home" />
 			<img class="red-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo.svg" alt="Fieldwork – Home" />
 		</a>
+		<ul class="social-icons header-social-icons">
+			<li><a href="https://twitter.com/MadeByFieldwork" class="icon-twitter"></a></li>
+			<li><a href="http://instagram.com/madebyfieldwork" class="icon-instagram"></a></li>
+			<li><a href="https://www.facebook.com/madebyfieldwork" class="icon-facebook"></a></li>
+			<li><a href="https://github.com/EMT" class="icon-github"></a></li>
+		</ul>
 		<nav>
 			<a class="work fade-transition" href="/work">Work</a>
 			<a class="us fade-transition" href="/us">Us</a>
@@ -31,4 +37,6 @@
 		</nav>
 	</div>
 </header>
+	
+
 <div class="wrapper <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">

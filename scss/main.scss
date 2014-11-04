@@ -1,18 +1,64 @@
+//	Put font-face here so that font URLs work locally and with Github pages
+
+@font-face {
+  font-family: 'Neuzeit';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/neuzeit-book.eot'); /* IE9 Compat Modes */
+  src: url('fonts/neuzeit-book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/neuzeit-book.woff') format('woff'), /* Modern Browsers */
+       url('fonts/neuzeit-book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/neuzeit-book.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Neuzeit';
+  font-weight: bold;
+  font-style: normal;
+  src: url('fonts/neuzeit-book.eot'); /* IE9 Compat Modes */
+  src: url('fonts/neuzeit-book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/neuzeit-book.woff') format('woff'), /* Modern Browsers */
+       url('fonts/neuzeit-book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/neuzeit-book.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?67832890');
+  src: url('fonts/fontello.eot?67832890#iefix') format('embedded-opentype'),
+       url('fonts/fontello.woff?67832890') format('woff'),
+       url('fonts/fontello.ttf?67832890') format('truetype'),
+       url('fonts/fontello.svg?67832890#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Blog styles
 @import 'blog/variables';
-@import 'shared/reset';
-
 @import 'blog/base';
-
-
-@import 'shared/header';
-@import 'shared/footer';
-@import 'shared/shared';
-
 @import 'blog/archive';
 @import 'blog/categories';
 @import 'blog/sidebar';
 @import 'blog/typography';
 @import 'blog/posts';
-
-// Temp old.
 @import 'blog/blog';
+
+// Variables_variables.scss
+
+@import 'variables.scss';
+
+// Basic site styles.
+@import 'site/reset';
+@import 'site/base';
+@import 'site/header';
+@import 'site/footer';
+@import 'site/page-sections';
+
+// Project styles
+@import 'projects/project';
+@import 'projects/grid';
+@import 'projects/captions';
+
+// Form Styles for Project planner.
+@import 'form/form';
+@import 'form/loader';
+@import 'form/notifications';
+@import 'form/nouislider';
