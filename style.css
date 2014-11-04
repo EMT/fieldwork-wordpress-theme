@@ -563,6 +563,10 @@ li.studio:hover a:after,
 
 .post-author {
   font-size: 0.666em; }
+  .post-author .author-link a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: capitalize; }
 
 .text > .wrapper {
   position: relative; }

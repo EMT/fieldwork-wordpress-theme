@@ -9,7 +9,7 @@
 				<div class="project-title">
 					<h1 class="cat-hightlight"><?php the_title(); ?></h1>
 					<p>Posted on <?php the_time('F j Y'); ?></p>
-					<p class="post-author">Posted by Eve</p>
+					<p class="post-author">Posted by <span class="author-link"><?php the_author_posts_link(); ?></span></p>
 					<div class="project-social">
 						<ul>
 							<li><a href="#" target="_blank">Tweet</a></li>

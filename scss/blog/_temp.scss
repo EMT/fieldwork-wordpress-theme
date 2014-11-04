@@ -38,6 +38,13 @@
 
 .post-author {
 	font-size: 0.666em;
+	
+	.author-link a {
+		color: inherit;
+		text-decoration: none;
+		text-transform: capitalize;
+	}
+
 }
 
 
