@@ -8,9 +8,6 @@
 // Consolodate some styles together.
 
 @media only screen and (max-width: 900px) {
-	.wrapper {
-		width: 100% !important;
-	}
 
 	.sidebar {
 		position: fixed;
@@ -31,7 +28,6 @@
 	body {
 		position: relative;
 		overflow-x: hidden;
-		margin-top: 3.1em !important;
 	}
 
 	html.open .sidebar {

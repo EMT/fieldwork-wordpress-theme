@@ -1,0 +1,75 @@
+.blog-content {
+	img {
+		max-width: 100%;
+		display: block;
+	}	
+}
+
+.related-posts {
+	position: absolute;
+	bottom: 2em;
+	left: 0;
+}
+
+.blog-content p:last-of-type {
+	margin-bottom: 0;
+}
+
+.hero .related-posts p {
+	margin-bottom: 0.25em;
+	color: rgb(167,169,172);
+}
+
+.related-posts a {
+	margin-bottom: 1em;
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.3em;
+}
+
+.related-posts a:last-of-type {
+	margin-bottom: 0;
+}
+
+.blog-content {
+	min-height: 300px;
+}
+
+.post-author {
+	font-size: 0.666em;
+}
+
+
+/// Put these in the jekyll theme files.
+
+
+// --> _project.scss
+.text > .wrapper {
+	position: relative;
+}
+
+
+// --> _project.scss:158
+.hero p {
+	line-height: 1.4 !important;
+}
+
+
+// --> _page-sections.scss
+@media screen and (max-width: 900px) {
+	// Ignore the important - its just cause it's in the wrong file.
+	.content-section-body {
+		width: 100% !important;
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+	// Ignore the important - its just cause it's in the wrong file.
+	.related-posts {
+		position: static;
+		float: left;
+	}
+
+}

@@ -1,177 +1,136 @@
 // Background
-
+.blog-category {
+	height: 100%;
+}
 
 li.code a.tag,
 li.code:hover a:after,
 .wrapper.code-main li.code a:after, 
 .post-list .code-main .no-image, .code-main .post-content .no-image {
-	background: $blog-pink;
+	background: $blog-code;
 }
 
-li.inspiring a.tag,
-li.inspiring:hover a:after,
-.wrapper.inspiring-main li.inspiring a:after,
-.post-list .inspiring-main .no-image, .inspiring-main .post-content .no-image {
-	background: $blog-yellow;
+li.inspiration a.tag,
+li.inspiration:hover a:after,
+.wrapper.inspiration-main li.inspiration a:after,
+.post-list .inspiration-main .no-image, .inspiration-main .post-content .no-image {
+	background: $blog-inspiration;
 }
 
 li.made a.tag,
 li.made:hover a:after,
 .wrapper.made-main li.made a:after,
 .post-list .made-main .no-image, .made-main .post-content .no-image {
-	background: $blog-turquoise;
+	background: $blog-made;
 }
 
-li.out-and-about a.tag,
-li.out-and-about:hover a:after,
-.wrapper.out-and-about-main li.out-and-about a:after,
-.post-list .out-and-about-main .no-image, .out-and-about-main .post-content .no-image {
-	background: $blog-blue;
+li.thinking a.tag,
+li.thinking:hover a:after,
+.wrapper.thinking-main li.thinking a:after,
+.post-list .thinking-main .no-image, .thinking-main .post-content .no-image {
+	background: $blog-thinking;
 }
 
 li.people a.tag,
 li.people:hover a:after,
 .wrapper.people-main li.people a:after,
 .post-list .people-main .no-image, .people-main .post-content .no-image {
-	background: $blog-pink--light;
+	background: $blog-people;
 }
 
 li.process a.tag,
 li.process:hover a:after,
 .wrapper.process-main li.process a:after,
 .post-list .process-main .no-image, .process-main .post-content .no-image {
-	background: $blog-lime-green;
+	background: $blog-process;
 }
 
 li.ideas a.tag,
 li.ideas:hover a:after,
 .wrapper.ideas-main li.ideas a:after,
 .post-list .ideas-main .no-image, .ideas-main .post-content .no-image {
-	background: $blog-red;
+	background: $blog-ideas;
 }
 
-li.found a.tag,
-li.found:hover a:after,
-.wrapper.found-main li.found a:after,
-.post-list .found-main .no-image, .found-main .post-content .no-image {
-	background: $blog-blue--light;
+li.adventures a.tag,
+li.adventures:hover a:after,
+.wrapper.adventures-main li.adventures a:after,
+.post-list .adventures-main .no-image, .adventures-main .post-content .no-image {
+	background: $blog-adventures;
 }
 
-li.present a.tag,
-li.present:hover a:after,
-.wrapper.present-main li.present a:after,
-.post-list .present-main .no-image, .present-main .post-content .no-image {
-	background: $blog-orange;
+li.design a.tag,
+li.design:hover a:after,
+.wrapper.design-main li.design a:after,
+.post-list .design-main .no-image, .design-main .post-content .no-image {
+	background: $blog-design;
 }
 
 li.studio a.tag,
 li.studio:hover a:after,
 .wrapper.studio-main li.studio a:after,
 .post-list .studio-main .no-image, .studio-main .post-content .no-image {
-	background: $blog-pale-green;
+	background: $blog-studio;
 }
 
 // Color
-
-li.code a:hover,
-.wrapper.code-main li.code a,
-.wrapper.code-main .post-content .title,
-.wrapper.code-main .post-content .caption,
-.wrapper.code-main .post-content h2,
-.wrapper.code-main .post-content h3,
-.wrapper.code-main .post-content h4 {
-	color: $blog-pink;
+.blog-category.code-main {
+	.cat-hightlight {
+		color: $blog-code;
+	}
 }
 
-li.inspiring a:hover,
-.wrapper.inspiring-main li.inspiring a,
-.wrapper.inspiring-main .post-content .title,
-.wrapper.inspiring-main .post-content .caption,
-.wrapper.inspiring-main .post-content h2,
-.wrapper.inspiring-main .post-content h3,
-.wrapper.inspiring-main .post-content h4 {
-	color: $blog-yellow;
+.blog-category.inspiration-main {
+	.cat-hightlight {
+		color: $blog-inspiration;
+	}
 }
 
-li.made a:hover,
-.wrapper.made-main li.made a,
-.wrapper.made-main .post-content .title,
-.wrapper.made-main .post-content .caption,
-.wrapper.made-main .post-content h2,
-.wrapper.made-main .post-content h3,
-.wrapper.made-main .post-content h4 {
-	color: $blog-turquoise;
+.blog-category.made-main {
+	.cat-hightlight {
+		color: $blog-made;
+	}
 }
 
-li.out-and-about a:hover,
-.wrapper.out-and-about-main li.out-and-about a,
-.wrapper.out-and-about-main .post-content .title,
-.wrapper.out-and-about-main .post-content .caption,
-.wrapper.out-and-about-main .post-content h2,
-.wrapper.out-and-about-main .post-content h3,
-.wrapper.out-and-about-main .post-content h4 {
-	color: $blog-blue;
+.blog-category.thinking-main {
+	.cat-hightlight {
+		color: $blog-thinking;
+	}
 }
 
-li.people a:hover,
-.wrapper.people-main li.people a,
-.wrapper.people-main .post-content .title,
-.wrapper.people-main .post-content .caption,
-.wrapper.people-main .post-content h2,
-.wrapper.people-main .post-content h3,
-.wrapper.people-main .post-content h4 {
-	color: $blog-pink--light;
+.blog-category.people-main {
+	.cat-hightlight {
+		color: $blog-people;
+	}
 }
 
-li.process a:hover,
-.wrapper.process-main li.process a,
-.wrapper.process-main .post-content .title,
-.wrapper.process-main .post-content .caption,
-.wrapper.process-main .post-content h3,
-.wrapper.process-main .post-content h4 {
-	color: $blog-lime-green;
+.blog-category.process-main {
+	.cat-hightlight {
+		color: $blog-process;
+	}
 }
 
-li.ideas a:hover,
-.wrapper.ideas-main li.ideas a,
-.wrapper.ideas-main .post-content .title,
-.wrapper.ideas-main .post-content .caption,
-.wrapper.ideas-main .post-content h2,
-.wrapper.ideas-main .post-content h3,
-.wrapper.ideas-main .post-content h4 {
-	color: $blog-red;
+.blog-category.ideas-main {
+	.cat-hightlight {
+		color: $blog-ideas;
+	}
 }
 
-li.found a:hover,
-.wrapper.found-main li.found a,
-.wrapper.found-main .post-content .title,
-.wrapper.found-main .post-content .caption,
-.wrapper.found-main .post-content h2,
-.wrapper.found-main .post-content h3,
-.wrapper.found-main .post-content h4 {
-	color: $blog-blue--light;
+.blog-category.adventures-main {
+	.cat-hightlight {
+		color: $blog-adventures;
+	}
 }
 
-li.present a:hover,
-.wrapper.present-main li.present a,
-.wrapper.present-main .post-content .title,
-.wrapper.present-main .post-content .caption,
-.wrapper.present-main .post-content h2,
-.wrapper.present-main .post-content h3,
-.wrapper.present-main .post-content h4 {
-	color: $blog-orange;
+.blog-category.design-main {
+	.cat-hightlight {
+		color: $blog-design;
+	}
 }
 
-li.studio a:hover,
-.wrapper.studio-main li.studio a,
-.wrapper.studio-main .post-content .title,
-.wrapper.studio-main .post-content .caption, 
-.wrapper.studio-main .post-content h2,
-.wrapper.studio-main .post-content h3,
-.wrapper.studio-main .post-content h4 {
-	color: $blog-pale-green;
+.blog-category.studio-main {
+	.studio-hightlight {
+		color: $blog-studio;
+	}
 }
 
-// .uncategorised {
-// 		Uncategorised is handled by the default gray styling.
-// }

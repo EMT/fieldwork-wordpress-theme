@@ -1,4 +1,4 @@
-</div>
+
 <footer id="footer">
 	<div class="wrapper">
 		<div class="our-info">
@@ -49,6 +49,7 @@
 	    }
 	});
 </script>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

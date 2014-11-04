@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class('hero-header project'); ?>>
 
 <header>
 	<div>
@@ -39,4 +39,5 @@
 </header>
 	
 
-<div class="wrapper <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
+<div class="blog-category <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
+	    <div class="page-content">

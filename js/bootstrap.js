@@ -1,29 +1,29 @@
 // Swipe detection for the sidebar reveal.
 
-$(window).on('resize load', function() {
-	if ($(window).innerWidth()  <= 900) {
-		$("body").swipe("enable");
-		$("body").swipe( {
-				swipeLeft:function(event, fingerData, distance, duration) { 
-						$('html').addClass('open');
-						setTimeout(function(){
-							$('.sidebar').addClass('active');
-						},600);
-				},
-				swipeRight:function(event, fingerData, distance, duration) { 
-						$('html').removeClass('open');
-						setTimeout(function(){
-							$('.sidebar').removeClass('active');
-						},600);
-				},
-			 threshold:50,
-			 fingers:1,
-			 excludedElements:$.fn.swipe.defaults.excludedElements+", .gist"
-		});
-	} else {
-		$("body").swipe("disable");
-	}
-});
+// $(window).on('resize load', function() {
+// 	if ($(window).innerWidth()  <= 900) {
+// 		$("body").swipe("enable");
+// 		$("body").swipe( {
+// 				swipeLeft:function(event, fingerData, distance, duration) { 
+// 						$('html').addClass('open');
+// 						setTimeout(function(){
+// 							$('.sidebar').addClass('active');
+// 						},600);
+// 				},
+// 				swipeRight:function(event, fingerData, distance, duration) { 
+// 						$('html').removeClass('open');
+// 						setTimeout(function(){
+// 							$('.sidebar').removeClass('active');
+// 						},600);
+// 				},
+// 			 threshold:50,
+// 			 fingers:1,
+// 			 excludedElements:$.fn.swipe.defaults.excludedElements+", .gist"
+// 		});
+// 	} else {
+// 		$("body").swipe("disable");
+// 	}
+// });
 
 // Close the sidebar if its open and you click back on the main content.
 

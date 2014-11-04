@@ -21,59 +21,6 @@
   src: url("fonts/fontello.eot?67832890#iefix") format("embedded-opentype"), url("fonts/fontello.woff?67832890") format("woff"), url("fonts/fontello.ttf?67832890") format("truetype"), url("fonts/fontello.svg?67832890#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
-@font-face {
-  font-family: 'Neuzeit';
-  src: url("fonts/neuzeit-book.eot");
-  /* IE9 Compat Modes */
-  src: url("fonts/neuzeit-book.eot?#iefix") format("embedded-opentype"), url("fonts/neuzeit-book.woff") format("woff"), url("fonts/neuzeit-book.ttf") format("truetype"), url("fonts/neuzeit-book.svg#svgFontName") format("svg");
-  /* Legacy iOS */ }
-html {
-  height: 100%; }
-
-body {
-  font-family: 'Neuzeit';
-  color: #6d6e71;
-  background: #efefef;
-  margin-top: 6em;
-  position: relative;
-  min-height: 100%;
-  padding-bottom: 6em;
-  font-size: 16px; }
-
-header > div,
-footer > div,
-.wrapper {
-  max-width: 1580px;
-  width: 90%;
-  margin: 0 auto; }
-
-.banner {
-  width: 100%;
-  float: left;
-  margin-bottom: 2em; }
-
-.main-content {
-  float: left;
-  width: 65%;
-  margin-right: 10%; }
-
-.sidebar {
-  float: right;
-  width: 25%;
-  font-size: 0.9em; }
-
-body {
-  font-size: 1em; }
-
-@media only screen and (max-width: 900px) {
-  .post-image {
-    font-size: 0.85em; }
-
-  html {
-    height: 100%; }
-
-  body, .sidebar, .main-content, .wrapper {
-    min-height: 100%; } }
 .post-list {
   padding: 0;
   list-style: none; }
@@ -127,159 +74,100 @@ body {
     font-size: 1.3em;
     line-height: 1.2; }
 
+.blog-category {
+  height: 100%; }
+
 li.code a.tag,
 li.code:hover a:after,
 .wrapper.code-main li.code a:after,
 .post-list .code-main .no-image, .code-main .post-content .no-image {
-  background: #ee467b; }
+  background: #ff5b34; }
 
-li.inspiring a.tag,
-li.inspiring:hover a:after,
-.wrapper.inspiring-main li.inspiring a:after,
-.post-list .inspiring-main .no-image, .inspiring-main .post-content .no-image {
-  background: #fedd3c; }
+li.inspiration a.tag,
+li.inspiration:hover a:after,
+.wrapper.inspiration-main li.inspiration a:after,
+.post-list .inspiration-main .no-image, .inspiration-main .post-content .no-image {
+  background: #684458; }
 
 li.made a.tag,
 li.made:hover a:after,
 .wrapper.made-main li.made a:after,
 .post-list .made-main .no-image, .made-main .post-content .no-image {
-  background: #3fd4ad; }
+  background: #0074c8; }
 
-li.out-and-about a.tag,
-li.out-and-about:hover a:after,
-.wrapper.out-and-about-main li.out-and-about a:after,
-.post-list .out-and-about-main .no-image, .out-and-about-main .post-content .no-image {
-  background: #0069a6; }
+li.thinking a.tag,
+li.thinking:hover a:after,
+.wrapper.thinking-main li.thinking a:after,
+.post-list .thinking-main .no-image, .thinking-main .post-content .no-image {
+  background: #70a087; }
 
 li.people a.tag,
 li.people:hover a:after,
 .wrapper.people-main li.people a:after,
 .post-list .people-main .no-image, .people-main .post-content .no-image {
-  background: #f185ce; }
+  background: #00bc6f; }
 
 li.process a.tag,
 li.process:hover a:after,
 .wrapper.process-main li.process a:after,
 .post-list .process-main .no-image, .process-main .post-content .no-image {
-  background: #c4e76a; }
+  background: #00c4b3; }
 
 li.ideas a.tag,
 li.ideas:hover a:after,
 .wrapper.ideas-main li.ideas a:after,
 .post-list .ideas-main .no-image, .ideas-main .post-content .no-image {
-  background: #f42434; }
+  background: #00795f; }
 
-li.found a.tag,
-li.found:hover a:after,
-.wrapper.found-main li.found a:after,
-.post-list .found-main .no-image, .found-main .post-content .no-image {
-  background: #9be6d7; }
+li.adventures a.tag,
+li.adventures:hover a:after,
+.wrapper.adventures-main li.adventures a:after,
+.post-list .adventures-main .no-image, .adventures-main .post-content .no-image {
+  background: #dc5f13; }
 
-li.present a.tag,
-li.present:hover a:after,
-.wrapper.present-main li.present a:after,
-.post-list .present-main .no-image, .present-main .post-content .no-image {
-  background: #ff9d6b; }
+li.design a.tag,
+li.design:hover a:after,
+.wrapper.design-main li.design a:after,
+.post-list .design-main .no-image, .design-main .post-content .no-image {
+  background: #ffbf3b; }
 
 li.studio a.tag,
 li.studio:hover a:after,
 .wrapper.studio-main li.studio a:after,
 .post-list .studio-main .no-image, .studio-main .post-content .no-image {
-  background: #e3e733; }
+  background: #f6323e; }
 
-li.code a:hover,
-.wrapper.code-main li.code a,
-.wrapper.code-main .post-content .title,
-.wrapper.code-main .post-content .caption,
-.wrapper.code-main .post-content h2,
-.wrapper.code-main .post-content h3,
-.wrapper.code-main .post-content h4 {
-  color: #ee467b; }
+.blog-category.code-main .cat-hightlight {
+  color: #ff5b34; }
 
-li.inspiring a:hover,
-.wrapper.inspiring-main li.inspiring a,
-.wrapper.inspiring-main .post-content .title,
-.wrapper.inspiring-main .post-content .caption,
-.wrapper.inspiring-main .post-content h2,
-.wrapper.inspiring-main .post-content h3,
-.wrapper.inspiring-main .post-content h4 {
-  color: #fedd3c; }
+.blog-category.inspiration-main .cat-hightlight {
+  color: #684458; }
 
-li.made a:hover,
-.wrapper.made-main li.made a,
-.wrapper.made-main .post-content .title,
-.wrapper.made-main .post-content .caption,
-.wrapper.made-main .post-content h2,
-.wrapper.made-main .post-content h3,
-.wrapper.made-main .post-content h4 {
-  color: #3fd4ad; }
+.blog-category.made-main .cat-hightlight {
+  color: #0074c8; }
 
-li.out-and-about a:hover,
-.wrapper.out-and-about-main li.out-and-about a,
-.wrapper.out-and-about-main .post-content .title,
-.wrapper.out-and-about-main .post-content .caption,
-.wrapper.out-and-about-main .post-content h2,
-.wrapper.out-and-about-main .post-content h3,
-.wrapper.out-and-about-main .post-content h4 {
-  color: #0069a6; }
+.blog-category.thinking-main .cat-hightlight {
+  color: #70a087; }
 
-li.people a:hover,
-.wrapper.people-main li.people a,
-.wrapper.people-main .post-content .title,
-.wrapper.people-main .post-content .caption,
-.wrapper.people-main .post-content h2,
-.wrapper.people-main .post-content h3,
-.wrapper.people-main .post-content h4 {
-  color: #f185ce; }
+.blog-category.people-main .cat-hightlight {
+  color: #00bc6f; }
 
-li.process a:hover,
-.wrapper.process-main li.process a,
-.wrapper.process-main .post-content .title,
-.wrapper.process-main .post-content .caption,
-.wrapper.process-main .post-content h3,
-.wrapper.process-main .post-content h4 {
-  color: #c4e76a; }
+.blog-category.process-main .cat-hightlight {
+  color: #00c4b3; }
 
-li.ideas a:hover,
-.wrapper.ideas-main li.ideas a,
-.wrapper.ideas-main .post-content .title,
-.wrapper.ideas-main .post-content .caption,
-.wrapper.ideas-main .post-content h2,
-.wrapper.ideas-main .post-content h3,
-.wrapper.ideas-main .post-content h4 {
-  color: #f42434; }
+.blog-category.ideas-main .cat-hightlight {
+  color: #00795f; }
 
-li.found a:hover,
-.wrapper.found-main li.found a,
-.wrapper.found-main .post-content .title,
-.wrapper.found-main .post-content .caption,
-.wrapper.found-main .post-content h2,
-.wrapper.found-main .post-content h3,
-.wrapper.found-main .post-content h4 {
-  color: #9be6d7; }
+.blog-category.adventures-main .cat-hightlight {
+  color: #dc5f13; }
 
-li.present a:hover,
-.wrapper.present-main li.present a,
-.wrapper.present-main .post-content .title,
-.wrapper.present-main .post-content .caption,
-.wrapper.present-main .post-content h2,
-.wrapper.present-main .post-content h3,
-.wrapper.present-main .post-content h4 {
-  color: #ff9d6b; }
+.blog-category.design-main .cat-hightlight {
+  color: #ffbf3b; }
 
-li.studio a:hover,
-.wrapper.studio-main li.studio a,
-.wrapper.studio-main .post-content .title,
-.wrapper.studio-main .post-content .caption,
-.wrapper.studio-main .post-content h2,
-.wrapper.studio-main .post-content h3,
-.wrapper.studio-main .post-content h4 {
-  color: #e3e733; }
+.blog-category.studio-main .studio-hightlight {
+  color: #f6323e; }
 
 @media only screen and (max-width: 900px) {
-  .wrapper {
-    width: 100% !important; }
-
   .sidebar {
     position: fixed;
     width: 40% !important;
@@ -297,8 +185,7 @@ li.studio a:hover,
 
   body {
     position: relative;
-    overflow-x: hidden;
-    margin-top: 3.1em !important; }
+    overflow-x: hidden; }
 
   html.open .sidebar {
     right: 0; }
@@ -645,12 +532,51 @@ li.studio a:hover,
     width: 100%;
     float: none;
     margin: 0 0 0.75em 0; } }
-@media only screen and (max-width: 900px) {
-  .post-image {
-    font-size: 0.85em; }
+.blog-content img {
+  max-width: 100%;
+  display: block; }
 
-  .sidebar, .main-content {
-    min-height: 100%; } }
+.related-posts {
+  position: absolute;
+  bottom: 2em;
+  left: 0; }
+
+.blog-content p:last-of-type {
+  margin-bottom: 0; }
+
+.hero .related-posts p {
+  margin-bottom: 0.25em;
+  color: #a7a9ac; }
+
+.related-posts a {
+  margin-bottom: 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.3em; }
+
+.related-posts a:last-of-type {
+  margin-bottom: 0; }
+
+.blog-content {
+  min-height: 300px; }
+
+.post-author {
+  font-size: 0.666em; }
+
+.text > .wrapper {
+  position: relative; }
+
+.hero p {
+  line-height: 1.4 !important; }
+
+@media screen and (max-width: 900px) {
+  .content-section-body {
+    width: 100% !important; } }
+@media screen and (max-width: 900px) {
+  .related-posts {
+    position: static;
+    float: left; } }
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
@@ -704,7 +630,6 @@ body {
   line-height: 1.4em;
   color: #6d6e71;
   background: white;
-  margin-top: 6em;
   position: relative;
   min-height: 100%;
   -webkit-font-smoothing: antialiased; }
