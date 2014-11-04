@@ -1,8 +1,6 @@
 
 <?php get_header(); ?>
 
-
-<?php get_sidebar(); ?>
 <div class="main-content">
 	<ul class="post-list">
 		
@@ -43,6 +41,6 @@
 	<?php endif; ?> 
 	</ul>
 </div>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>
