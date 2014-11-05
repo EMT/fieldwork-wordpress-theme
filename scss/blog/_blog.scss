@@ -1,0 +1,15 @@
+@media only screen and (max-width: 900px) {
+
+.post-image {
+	font-size: 0.85em;
+}
+
+html, body,  .wrapper {
+	// height: 100%;
+}
+
+.sidebar, .main-content {
+	min-height: 100%;
+}
+
+}
