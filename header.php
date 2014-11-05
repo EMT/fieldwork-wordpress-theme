@@ -13,7 +13,19 @@
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class('hero-header project'); ?>>
+
+<?php 
+
+
+if ( is_single() ) {
+
+$cake = 'hero-header project';
+
+}
+
+?>
+
+<body <?php body_class($cake); ?>>
 
 <header>
 	<div>
