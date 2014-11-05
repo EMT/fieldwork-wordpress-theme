@@ -1,4 +1,4 @@
-.images .image-col-3 {
+.image-col-3 {
 	width: 33.33%;
 	float: left;
 	box-sizing: border-box;
@@ -6,7 +6,7 @@
 	margin-bottom: 10px;
 }
 
-.images .image-col-2 {
+.image-col-2 {
 	width: 50%;
 	float: left;
 	box-sizing: border-box;
@@ -23,18 +23,37 @@
 	margin-bottom: 10px;
 }
 
+.image-col-1, .image-col-2, .image-col-3 {
+	margin-bottom: 1em;
+}
+
+.caption {
+	margin-top: 0.50em;
+	display: inline-block;
+}
+
+.images {
+	margin: 0 -10px 2em -10px;
+}
+
+.images:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
 @media only screen and (max-width: 650px) {
 
 	.post-image {
 	font-size: 0.7em;
 	}
 
-	.post-content .images-wrapper {
+	.images-wrapper {
 		width: 100%;
 		float: right;
 	}
 
-	.post-content .images {
+	.images {
 		width: auto;
 		float: none;
 	}

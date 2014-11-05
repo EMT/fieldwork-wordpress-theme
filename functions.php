@@ -139,6 +139,17 @@ function imageGallery($atts, $content = null) {
 
                     $link = get_sub_field('image');
 
+                    // Video Stuffs.
+
+                    if ( get_sub_field('video_url') ) {
+                        $video_url = '<div class="play" data-video="'.get_sub_field('video_url').'"></div>';
+                        $video = 'blog-video';
+                    } else {
+                        $video_url = '';
+                        $video = '';
+                    }
+
+
                     // Do we want a link with that image ?
                     if ( get_sub_field('link') == 'true' ) {
                         $preLinkWrapper = '<a href="'.$link.'"/>';
@@ -182,7 +193,7 @@ function imageGallery($atts, $content = null) {
                         }
 
                     // Outputting each image.
-                    $output .='<div class="image-col-'.$layout.'">'.$preLinkWrapper.'<img src="'.get_sub_field('image').'"/>'.$postLinkWrapper.$caption.'</div>';
+                    $output .='<div class="'.$video.' image-col-'.$layout.'">'.$preLinkWrapper.'<img src="'.$link.'"/>'.$video_url.$postLinkWrapper.$caption.'</div>';
 
                 endwhile;
                 
