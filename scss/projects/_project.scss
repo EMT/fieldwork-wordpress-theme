@@ -103,11 +103,12 @@ body.project {
 	background-position: center;
 	-webkit-background-size:cover;
 	background-size: cover;
+	background-position: 50% 0px;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (max-width: 900px) {
 	.hero-picture {
-		background-attachment: fixed;
+		height: 50%;
 	}
 }
 

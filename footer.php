@@ -48,6 +48,15 @@
 	        header.removeClass('visible');
 	    }
 	});
+
+	$(window).scroll(function() {
+		if ( $(window).outerWidth() >= 900 ) {
+		  var scrolledY = $(window).scrollTop();
+		  $('.hero-picture').css('background-position', 'left ' + ((scrolledY)) + 'px');
+		}
+	});
+
+
 </script>
 </div>
 <?php wp_footer(); ?>
