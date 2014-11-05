@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-<div class="main-content">
+<div class="wrapper">
 	<ul class="post-list">
 		
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -15,14 +15,12 @@
 				<?php } else { ?>
 					<div class="post-image no-image">
 						<h5 class="category"><?php echo get_cat_name( get_post_meta($post->ID, 'mob_category_prefered', true) ) ?></h5>
-						<p><?php the_excerpt(); ?></p>
 					</div>
 				<?php } ?>
 				</a>
 				<div class="post-meta-data">
 					<span class="date"><?php the_time('F j'); ?></span>
-					<a href="<?php the_permalink() ?>"><h2 class="title"><?php the_title(); ?><?php if ( get_post_meta($post->ID, 'title_long', true) ) : ?><span class="title-long"> - <?php echo get_post_meta($post->ID, 'title_long', true); ?></span><?php endif; ?></h2></a>
-					<span class="go-to"><a href="<?php the_permalink() ?>"></a></span>
+					<a href="<?php the_permalink() ?>"><h2 class="title"><?php the_title(); ?></h2></a>
 					<ul class="category-icons">
 						<?php 
 						foreach((get_the_category()) as $category) { 
@@ -34,10 +32,10 @@
 			</article>
 		</li>
 	<?php endwhile;?>
-	<div class="pagination">
+<!-- 	<div class="pagination">
 	<span class="next"><?php next_posts_link('next'); ?></span>
 	<span class="prev"><?php previous_posts_link('previous'); ?></span>
-	</div>
+	</div> -->
 	<?php endif; ?> 
 	</ul>
 </div>

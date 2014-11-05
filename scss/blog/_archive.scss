@@ -12,12 +12,13 @@
 }
 
 .post-list > li {
-	margin: 2.5em 0;
+box-sizing: border-box;
+width: 50%;
+float: left;
+padding: 0 0.5em 1em;
+position: relative;
 }
 
-.post-list > li:first-of-type {
-	margin: 0 0 2.5em 0;
-}
 
 .pagination {
 
