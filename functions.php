@@ -150,17 +150,11 @@ function imageGallery($atts, $content = null) {
 
                     // Does each image have a caption, if so show it.
                     if ( get_sub_field('caption') ) {
-                        $caption = '<span class="caption">'.get_sub_field('caption').'</span>';
+                        $caption = '<span class="caption cat-highlight">'.get_sub_field('caption').'</span>';
                     } else {
                         $caption = '';
                     }
 
-                    // Does each image have another caption ( usually the owner ), if so show it.
-                    if ( get_sub_field('owner') ) {
-                        $captionAlt = '<span class="caption-alt">- '.get_sub_field('owner').'</span>';
-                    } else {
-                        $captionAlt = '';
-                    }
 
                     //  Alternative more complex layouts
 
@@ -188,7 +182,7 @@ function imageGallery($atts, $content = null) {
                         }
 
                     // Outputting each image.
-                    $output .='<div class="image-col-'.$layout.'">'.$preLinkWrapper.'<img src="'.get_sub_field('image').'"/>'.$postLinkWrapper.$caption.$captionAlt.'</div>';
+                    $output .='<div class="image-col-'.$layout.'">'.$preLinkWrapper.'<img src="'.get_sub_field('image').'"/>'.$postLinkWrapper.$caption.'</div>';
 
                 endwhile;
                 

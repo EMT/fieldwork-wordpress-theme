@@ -75,62 +75,89 @@ li.studio:hover a:after,
 
 // Color
 .blog-category.code-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-code;
 	}
 }
 
 .blog-category.inspiration-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-inspiration;
 	}
 }
 
 .blog-category.made-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-made;
 	}
 }
 
 .blog-category.thinking-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-thinking;
 	}
 }
 
 .blog-category.people-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-people;
 	}
 }
 
 .blog-category.process-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-process;
 	}
 }
 
 .blog-category.ideas-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-ideas;
 	}
 }
 
 .blog-category.adventures-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-adventures;
 	}
 }
 
 .blog-category.design-main {
-	.cat-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-design;
 	}
 }
 
 .blog-category.studio-main {
-	.studio-hightlight {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
 		color: $blog-studio;
 	}
 }
 
+.blog-category.found-main {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
+		color: $blog-found;
+	}
+}
