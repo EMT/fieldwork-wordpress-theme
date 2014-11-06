@@ -1,12 +1,4 @@
 
-
-
-
-// TYPOGRAPHY 
-.title h1, .title span {
-	display: inline;
-}
-
 .blog-content {
 
 	h3 {
@@ -32,11 +24,6 @@
 		padding-left: 1em;
 	}
 
-	.gist {
-		font-size: 0.9em;
-		margin: 2em 0;
-	}
-
 }
 
 
@@ -49,15 +36,6 @@
 
 @media only screen and (max-width: 650px) {
 
-
-
-.post-content .gist {
-	font-size: 0.8em;
-}
-
-.post-content .inner-content li {
-	margin: 0.3em 0;	
-}
 
 .pagination span a {
 	padding: 0;

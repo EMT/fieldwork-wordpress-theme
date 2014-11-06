@@ -4,18 +4,21 @@
 
 	.category-icons {
 		float: left;
-		width: 100%;
+		width: 25%;
 	}
 
 	a {
 		text-decoration: none;
 	}
 
-	.title {
-		text-align: center;
+	.post-meta-data {
+		text-align: left;
 		display: block;
-		float: left;
-		width: 50%;
+		float: right;
+		width: 55%;
+	}
+
+	.title {
 		color: rgb(88,89,91);
 	}
 
@@ -23,138 +26,5 @@
 		display: block;
 		margin: 0.5em 0;
 	}
-
-	.date {
-		float: left;
-		width: 25%;
-		display: block;
-	}
-}
-
-
-
-.post-content {
-
-
-
-	.inner-content p > img, .inner-content p a > img {
-		width: 117.6%;
-		float: right;
-		margin: 0 0 0.75em 0;
-	}
-
-	.title-img {
-		margin-bottom: 2em;
-	}
-
-	.meta-data ul {
-		float: none;
-		width: auto;
-	}
-
-	.inner-content {
-	width: 85%;
-	float: right;
-	line-height: 1.65;
-	margin-top: 0.5em;
-
-		.title {
-			display: inline-block;
-			margin: inherit;
-		}
-
-		.gist {
-			width: 100%;
-			float: left;
-		}
-
-	}
-	.author {
-		display: block;	
-	}
-
-}
-
-
-
-.image-col-1 {
-	position: relative;
-}
-
-//  Videos
-
-.video-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	margin: 2em 0;
-	height: 0;
-	overflow: hidden;
-	width: 100%;
-	float: left;
-}
-
-.video-container iframe, .video-container object, .video-container embed {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-}
-
-@media only screen and (max-width: 650px) {
-
-.main-content {
-	width: 100%;
-	margin: 0;
-}
-
-.sidebar {
-	width: 100%;
-}
-
-.post-content .inner-content {
-	width: 100%;
-	margin-top: 0.5em;
-}
-
-.post-content .meta-data {
-	width: auto;
-	margin-bottom: 1em;
-}
-
-.post-content .images-wrapper {
-	width: 100%;
-}
-
-.no-image {
-	height: auto;
-	padding: 5% 5% 20% 5%;
-}
-
-.post-content .title {
-	margin-bottom: 0.75em;
-	width: 100%;
-}
-
-.post-content .meta-data {
-	margin-bottom: -0.5em;
-}
-
-.post-image, .no-image {
-	margin-bottom: 	1.4em;
-}
-
-.post-content .images {
-	margin: 0;
-}
-
-// Inline images
-.post-content .inner-content p > img, .post-content .inner-content p a > img {
-	width: 100%;
-	float: none;
-	margin: 0 0 0.75em 0;
-}
-
 
 }

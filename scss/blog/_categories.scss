@@ -1,4 +1,65 @@
-// Background
+// Categories links 
+.category-links a {
+	text-decoration: none;
+	color: rgb(170,170,170);
+	display: block;
+	padding: 0.3em 0;
+	position: relative;
+}
+
+
+.category-links a:after, .category-icons a.tag  {
+	content: '';
+	display: block;
+	height: 10px;
+	width: 10px;
+	border-radius: 15px;
+	position: relative;
+	background: rgb(209, 211, 212);
+}
+
+.category-links a:after {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// Icons
+
+.category-icons {
+	list-style: none;
+	padding: 0;
+}
+
+.category-icons li {
+	display: inline-block;
+	margin: 0 0.1em;
+}
+
+.category-icons a.tag:hover:after, .category-icons a.tag.active:after {
+	content: '';
+	display: block;
+	top: 3px;
+	left: 3px;
+	right: 3px;
+	bottom: 3px;
+	border-radius: 15px;
+	background: rgb(255,255,255);
+	position: absolute;
+}
+
+
+.category-links {
+	margin-bottom: 3.5em; 
+}
+
+
+
+
 .blog-category {
 	height: 100%;
 }
@@ -6,71 +67,85 @@
 li.code a.tag,
 li.code:hover a:after,
 .wrapper.code-main li.code a:after, 
-.post-list .code-main .no-image, .code-main .post-content .no-image {
-	background: $blog-code;
+.code-main .no-image, .code-main .post-content .no-image {
+	background-color: $blog-code;
 }
 
 li.inspiration a.tag,
 li.inspiration:hover a:after,
 .wrapper.inspiration-main li.inspiration a:after,
-.post-list .inspiration-main .no-image, .inspiration-main .post-content .no-image {
-	background: $blog-inspiration;
+.inspiration-main .no-image, .inspiration-main .post-content .no-image {
+	background-color: $blog-inspiration;
 }
 
 li.made a.tag,
 li.made:hover a:after,
 .wrapper.made-main li.made a:after,
-.post-list .made-main .no-image, .made-main .post-content .no-image {
-	background: $blog-made;
+.made-main .no-image, .made-main .post-content .no-image {
+	background-color: $blog-made;
 }
 
 li.thinking a.tag,
 li.thinking:hover a:after,
 .wrapper.thinking-main li.thinking a:after,
-.post-list .thinking-main .no-image, .thinking-main .post-content .no-image {
-	background: $blog-thinking;
+.thinking-main .no-image {
+	background-color: $blog-thinking;
 }
 
 li.people a.tag,
 li.people:hover a:after,
 .wrapper.people-main li.people a:after,
-.post-list .people-main .no-image, .people-main .post-content .no-image {
-	background: $blog-people;
+.people-main .no-image {
+	background-color: $blog-people;
 }
 
 li.process a.tag,
 li.process:hover a:after,
 .wrapper.process-main li.process a:after,
-.post-list .process-main .no-image, .process-main .post-content .no-image {
-	background: $blog-process;
+.process-main .no-image, {
+	background-color: $blog-process;
 }
 
 li.ideas a.tag,
 li.ideas:hover a:after,
 .wrapper.ideas-main li.ideas a:after,
-.post-list .ideas-main .no-image, .ideas-main .post-content .no-image {
-	background: $blog-ideas;
+.ideas-main .no-image {
+	background-color: $blog-ideas;
 }
 
 li.adventures a.tag,
 li.adventures:hover a:after,
 .wrapper.adventures-main li.adventures a:after,
-.post-list .adventures-main .no-image, .adventures-main .post-content .no-image {
-	background: $blog-adventures;
+.adventures-main .no-image {
+	background-color: $blog-adventures;
 }
 
 li.design a.tag,
 li.design:hover a:after,
 .wrapper.design-main li.design a:after,
-.post-list .design-main .no-image, .design-main .post-content .no-image {
-	background: $blog-design;
+.design-main .no-image {
+	background-color: $blog-design;
 }
 
 li.studio a.tag,
 li.studio:hover a:after,
 .wrapper.studio-main li.studio a:after,
-.post-list .studio-main .no-image, .studio-main .post-content .no-image {
-	background: $blog-studio;
+.studio-main .no-image {
+	background-color: $blog-studio;
+}
+
+li.found a.tag,
+li.found:hover a:after,
+.wrapper.found-main li.found a:after,
+.found-main .no-image {
+	background-color: $blog-found;
+}
+
+li.interesting a.tag,
+li.interesting:hover a:after,
+.wrapper.interesting-main li.interesting a:after,
+.interesting-main .no-image {
+	background-color: $blog-interesting;
 }
 
 // Color
@@ -159,5 +234,13 @@ li.studio:hover a:after,
 	.blog-content a,
 	.blog-content h3 {
 		color: $blog-found;
+	}
+}
+
+.blog-category.interesting-main {
+	.cat-highlight,
+	.blog-content a,
+	.blog-content h3 {
+		color: $blog-interesting;
 	}
 }

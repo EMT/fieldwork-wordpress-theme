@@ -11,8 +11,9 @@
 	left: 0;
 }
 
-.blog-content p:last-of-type {
-	margin-bottom: 0;
+.blog-content :last-child {
+	// Remove the important, this is just cause its in the wrong file.
+	margin-bottom: 0 !important;
 }
 
 .hero .related-posts p {
@@ -28,7 +29,7 @@
 	font-size: 1.3em;
 }
 
-.related-posts a:last-of-type {
+.related-posts a:last-child {
 	margin-bottom: 0;
 }
 
@@ -134,4 +135,33 @@ box-sizing: border-box;
 .play:hover {
 	cursor: pointer;
 	opacity: 0.8;
+}
+
+
+pre {
+	// Remove these importants, they are just cause its in the wrong file.
+	margin-bottom: 1em !important;
+}
+
+// Leave these though, overwritting a plugin.
+.hljs {
+	font-family: 'Source Code Pro' !important; 
+	font-size: 0.95em !important;
+	letter-spacing: -0.5px;
+}
+
+.post-image {
+	height: 0;
+	padding-bottom: 60%;
+	background-position: center;
+}
+
+.content-section-body ul {
+	// Remove - wrong file.
+	padding-left: 1.2em !important;
+}
+
+.blog-content ul {
+	// Remove - wrong file.
+	margin-bottom: 1em !important;
 }
