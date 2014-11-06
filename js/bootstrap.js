@@ -1,38 +1,36 @@
-// Swipe detection for the sidebar reveal.
+$(window).on('scroll', function() {
+	// Opacity for the header on project pages
+	var hero_height = $('.hero-picture').height(),
+	header = $('.project header');
 
-// $(window).on('resize load', function() {
-// 	if ($(window).innerWidth()  <= 900) {
-// 		$("body").swipe("enable");
-// 		$("body").swipe( {
-// 				swipeLeft:function(event, fingerData, distance, duration) { 
-// 						$('html').addClass('open');
-// 						setTimeout(function(){
-// 							$('.sidebar').addClass('active');
-// 						},600);
-// 				},
-// 				swipeRight:function(event, fingerData, distance, duration) { 
-// 						$('html').removeClass('open');
-// 						setTimeout(function(){
-// 							$('.sidebar').removeClass('active');
-// 						},600);
-// 				},
-// 			 threshold:50,
-// 			 fingers:1,
-// 			 excludedElements:$.fn.swipe.defaults.excludedElements+", .gist"
-// 		});
-// 	} else {
-// 		$("body").swipe("disable");
-// 	}
-// });
-
-// Close the sidebar if its open and you click back on the main content.
-
-$('.main-content').on('click', function() {
-	if ($('.sidebar').hasClass('active')) {
-		$('html').removeClass('open');
-		$('.sidebar').removeClass('active');
+	if ($(window).scrollTop() > hero_height) {
+		header.addClass('visible');
+	}
+	else{
+		header.removeClass('visible');
 	}
 });
+
+$(window).scroll(function() {
+	if ( $(window).outerWidth() >= 900 ) {
+		var scrolledY = $(window).scrollTop();
+		$('.hero-picture').css('background-position', '50%' + ((scrolledY)) + 'px');
+	}
+});
+
+$('.blog-video').on('click', function(){ 
+	var videoSource = $(this).children('.play').data('video');
+	$(this).children('img').fadeOut(750);
+	if ( $(this).children('.iframe-wrapper').length > 0 ) {
+		return;
+	} else {
+		$(this).prepend('<div class="iframe-wrapper"><iframe src="' + videoSource + '" frameborder="0" autoplay="true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>');
+	}
+	$(this).children('.iframe-wrapper').fadeIn();
+	$(this).children('img').addClass('video-playing');
+	$(this).children('.play').hide();
+});
+
 
 // Fix for the sidebar showing on mobile (looking into a css only version)
 // Sets the height of the main content to the height of the window if its too short.
@@ -45,31 +43,6 @@ $(window).on('resize load', function(){
 	if ( windowHeight > contentHeight ) {
 		$('.main-content').height(windowHeight);
 	}
-});
-
-// Disable main content scrolling when sidebar is open.
-
-$('.main-content').on('touchmove', function(e) {
-	if ( $('html').hasClass('open') ) {
-		e.preventDefault();
-	}
-});
-
-
-
-// Magic fix for ios bounce scrolling on sidebar.
-// - http://stackoverflow.com/a/17979071
-
-var elements = {};
-$('.sidebar').on('touchstart',elements,function(e){
-	e.data.max = this.scrollHeight - this.offsetHeight;
-	e.data.y = e.originalEvent.pageY;
-}).on('touchmove',elements,function(e){
-  	var dy = e.data.y - e.originalEvent.pageY;
-  	// if scrolling up and at the top, or down and at the bottom
-  	if((dy < 0 && this.scrollTop < 1)||(dy > 0 && this.scrollTop >= e.data.max)){
-    	e.preventDefault();
-  	};
 });
 
 
