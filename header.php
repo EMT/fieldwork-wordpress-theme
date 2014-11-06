@@ -10,23 +10,19 @@
 	It's been our pleasure.
 	-->
 	<title><?php echo (wp_title('', false)) ? wp_title('', false) . ' – ' : ''; ?><?php bloginfo( 'name' ); ?></title>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendor/default.css">
+	<script src="<?php echo get_template_directory_uri(); ?>/vendor/highlight.pack.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+	<script>hljs.initHighlightingOnLoad();</script>
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
-
 <?php 
-
-
-if ( is_single() ) {
-
-$cake = 'hero-header project';
-
-}
-
+	if ( is_single() ) {
+		$cake = 'hero-header project';
+	}
 ?>
-
 <body <?php body_class($cake); ?>>
-
 <header>
 	<div>
 		<a class="marque" href="/">
@@ -49,7 +45,5 @@ $cake = 'hero-header project';
 		</nav>
 	</div>
 </header>
-	
-
 <div class="blog-category <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
-	    <div class="page-content">
+	<div class="page-content">
