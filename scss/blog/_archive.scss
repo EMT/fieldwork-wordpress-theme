@@ -32,6 +32,36 @@ margin-bottom: 2em;
 	}
 } 
 
+.post {
+
+	.category-icons {
+		float: left;
+		width: 25%;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.post-meta-data {
+		text-align: left;
+		display: block;
+		float: right;
+		width: 55%;
+	}
+
+	.title {
+		color: rgb(88,89,91);
+	}
+
+	.under {
+		display: block;
+		margin: 0.5em 0;
+	}
+
+}
+
+
 
 .pagination {
 

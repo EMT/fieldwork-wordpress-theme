@@ -41,6 +41,22 @@
 @media screen and (max-width: 600px) {
   .post-list > li {
     width: 100%; } }
+.post .category-icons {
+  float: left;
+  width: 25%; }
+.post a {
+  text-decoration: none; }
+.post .post-meta-data {
+  text-align: left;
+  display: block;
+  float: right;
+  width: 55%; }
+.post .title {
+  color: #58595b; }
+.post .under {
+  display: block;
+  margin: 0.5em 0; }
+
 .pagination a {
   text-decoration: none;
   color: #a7a9ac;
@@ -346,22 +362,6 @@ li.interesting:hover a:after,
 
   .pagination span {
     margin: 0; } }
-.post .category-icons {
-  float: left;
-  width: 25%; }
-.post a {
-  text-decoration: none; }
-.post .post-meta-data {
-  text-align: left;
-  display: block;
-  float: right;
-  width: 55%; }
-.post .title {
-  color: #58595b; }
-.post .under {
-  display: block;
-  margin: 0.5em 0; }
-
 .blog-content img {
   max-width: 100%;
   display: block; }
