@@ -480,6 +480,16 @@ pre {
 .blog-content ul {
   margin-bottom: 1em !important; }
 
+.hero-picture {
+  position: relative;
+  z-index: -1;
+  background-position: center center !important; }
+
+.hero {
+  padding-bottom: 5% !important;
+  margin-bottom: 0 !important;
+  background: white; }
+
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
