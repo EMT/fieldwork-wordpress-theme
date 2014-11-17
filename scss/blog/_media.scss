@@ -1,0 +1,68 @@
+
+.blog-video {
+	position: relative;
+}
+.iframe-wrapper {
+		position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}
+}
+
+.play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.video-playing {
+	position: absolute;
+top: 0px;
+/* display: none; */
+width: 100%;
+left: 0;
+/* right: 10px; */
+padding: 0 10px;
+box-sizing: border-box;
+}
+
+.play {
+	background-image: url(images/play.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 4em;
+	width: 4em;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.play:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+// Code hightlighting 
+
+pre {
+	margin-bottom: 1em;
+}
+
+// Leave these, overwritting a plugin.
+.hljs {
+	font-family: 'Source Code Pro' !important; 
+	font-size: 0.95em !important;
+	letter-spacing: -0.5px;
+}
