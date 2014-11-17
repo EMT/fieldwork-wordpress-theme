@@ -11,10 +11,8 @@
 	-->
 	<title><?php echo (wp_title('', false)) ? wp_title('', false) . ' – ' : ''; ?><?php bloginfo( 'name' ); ?></title>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendor/default.css">
-	<script src="<?php echo get_template_directory_uri(); ?>/vendor/highlight.pack.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://emt.github.io/fieldwork-v2/css/main.css" type="text/css">
-	<script>hljs.initHighlightingOnLoad();</script>
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
