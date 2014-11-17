@@ -473,4 +473,20 @@ pre {
 .blog-content ul {
   margin-bottom: 1em; }
 
+.hero-picture {
+  position: relative;
+  z-index: -1;
+  background-position: center center !important; }
+
+.hero {
+  padding-bottom: 5% !important;
+  margin-bottom: 0 !important;
+  background: white; }
+
+.text > .wrapper {
+  position: relative; }
+
+.home {
+  margin-top: 6em; }
+
 /*# sourceMappingURL=style.css.map */
