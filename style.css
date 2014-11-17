@@ -367,7 +367,7 @@ li.interesting:hover a:after,
 
 .related-posts {
   position: absolute;
-  bottom: 2em;
+  bottom: 0;
   left: 0; }
 
 .blog-content :last-child {
