@@ -390,8 +390,11 @@ li.interesting:hover a:after,
 .blog-content {
   min-height: 300px; }
 
+.single .section-title p {
+  margin-bottom: 0.5em; }
+
 .post-author {
-  font-size: 0.666em; }
+  font-size: 1em; }
   .post-author .author-link a {
     color: inherit;
     text-decoration: none;

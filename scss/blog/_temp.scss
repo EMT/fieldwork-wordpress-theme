@@ -37,8 +37,12 @@
 	min-height: 300px;
 }
 
+.single .section-title p {
+	margin-bottom: 0.5em
+}
+
 .post-author {
-	font-size: 0.666em;
+	font-size: 1em;
 	
 	.author-link a {
 		color: inherit;
