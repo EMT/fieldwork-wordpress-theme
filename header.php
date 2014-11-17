@@ -13,19 +13,20 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendor/default.css">
 	<script src="<?php echo get_template_directory_uri(); ?>/vendor/highlight.pack.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://emt.github.io/fieldwork-v2/css/main.css" type="text/css">
 	<script>hljs.initHighlightingOnLoad();</script>
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
 <?php 
 	if ( is_single() ) {
-		$cake = 'hero-header project';
+		$is_project = 'hero-header project';
 	}
 ?>
-<body <?php body_class($cake); ?>>
+<body <?php body_class($is_project); ?>>
 <header>
 	<div>
-		<a class="marque" href="/">
+		<a class="marque" href="http://emt.github.io/fieldwork-v2/">
 			<img class="white-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo-white.svg" alt="Fieldwork – Home" />
 			<img class="red-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo.svg" alt="Fieldwork – Home" />
 		</a>
@@ -36,14 +37,20 @@
 			<li><a href="https://github.com/EMT" class="icon-github"></a></li>
 		</ul>
 		<nav>
-			<a class="work fade-transition" href="/work">Work</a>
-			<a class="us fade-transition" href="/us">Us</a>
-			<a class="journal fade-transition" href="/emt">Feed</a>
-			<a class="contact fade-transition" href="/contact">Contact</a>
-			<a class="search" id="open-search" href="/search">Search</a>
-			<a class="index" id="open-index" href="/favourites">Favourites</a>
+			<a class="work fade-transition" href="http://emt.github.io/fieldwork-v2/work">Work</a>
+			<a class="us fade-transition" href="http://emt.github.io/fieldwork-v2/us">Us</a>
+			<a class="journal fade-transition" href="/">Feed</a>
+			<a class="contact fade-transition" href="http://emt.github.io/fieldwork-v2/contact">Contact</a>
 		</nav>
 	</div>
 </header>
 <div class="blog-category <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
+	
+<?php 
+	if ( is_single() ) { ?>
+
+	<div <?php if ( has_post_thumbnail() ) { ?>style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover;" class="hero-picture"<?php } else { ?> class="hero-picture no-image" <?php } ?>></div>
+
+<?php } ?>
+
 	<div class="page-content">
