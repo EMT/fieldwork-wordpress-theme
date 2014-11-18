@@ -37,10 +37,11 @@
 	margin-bottom: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
 	.related-posts {
-		position: static;
 		float: left;
+		position: static;
+		margin-top: 2em;
 	}
 
 }

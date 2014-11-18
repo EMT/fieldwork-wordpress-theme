@@ -448,10 +448,11 @@ pre {
 .related-posts a:last-child {
   margin-bottom: 0; }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   .related-posts {
+    float: left;
     position: static;
-    float: left; } }
+    margin-top: 2em; } }
 .blog-content {
   min-height: 300px; }
 
@@ -488,5 +489,10 @@ pre {
 
 .home {
   margin-top: 6em; }
+
+@media screen and (max-width: 980px) {
+  .blog-category .section-title {
+    float: left;
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

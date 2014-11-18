@@ -17,3 +17,11 @@
 .home {
 	margin-top: 6em;
 }
+
+@media screen and (max-width: 980px) {
+	.blog-category .section-title {
+		float: left;
+		width: 100%;
+	}
+}
+
