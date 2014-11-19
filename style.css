@@ -351,7 +351,6 @@ li.interesting:hover a:after,
 .blog-content strong {
   font-weight: bold; }
 .blog-content blockquote, .blog-content q {
-  margin-left: 2em;
   border-left: 3px solid #cccccc;
   padding-left: 1em; }
 
