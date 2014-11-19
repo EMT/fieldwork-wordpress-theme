@@ -1,4 +1,5 @@
 
+
 // Posts lists
 
 .post-list {
@@ -119,7 +120,9 @@ margin-bottom: 2em;
 
 .post-list {
 	margin-bottom: 2em;
-
+	margin-left: -10px;
+	margin-right: -10px;
+	
 	.no-image {
 		position: relative;
 		height: 0;
