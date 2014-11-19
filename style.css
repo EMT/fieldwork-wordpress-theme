@@ -488,7 +488,7 @@ pre {
 .text > .wrapper {
   position: relative; }
 
-.home {
+.home, .archive {
   margin-top: 6em; }
 
 @media screen and (max-width: 980px) {
