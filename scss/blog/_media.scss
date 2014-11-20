@@ -3,16 +3,18 @@
 	position: relative;
 }
 .iframe-wrapper {
-		position: relative;
+	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
+	margin-bottom: 1em;
 	padding-top: 25px;
 	height: 0;
+
 	iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -28,13 +30,11 @@
 
 .video-playing {
 	position: absolute;
-top: 0px;
-/* display: none; */
-width: 100%;
-left: 0;
-/* right: 10px; */
-padding: 0 10px;
-box-sizing: border-box;
+	top: 0px;
+	width: 100%;
+	left: 0;
+	padding: 0 10px;
+	box-sizing: border-box;
 }
 
 .play {
