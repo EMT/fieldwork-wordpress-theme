@@ -366,7 +366,8 @@ li.interesting:hover a:after,
   font-weight: bold; }
 .blog-content blockquote, .blog-content q {
   border-left: 3px solid #cccccc;
-  padding-left: 1em; }
+  padding-left: 1em;
+  margin-bottom: 1em; }
 
 @media only screen and (max-width: 650px) {
   .pagination span a {
