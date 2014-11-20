@@ -285,62 +285,74 @@ li.interesting:hover a:after,
 
 .blog-category.code-main .cat-highlight,
 .blog-category.code-main .blog-content a,
-.blog-category.code-main .blog-content h3 {
+.blog-category.code-main .blog-content h3,
+.blog-category.code-main .blog-content h2 {
   color: #ff5b34; }
 
 .blog-category.inspiration-main .cat-highlight,
 .blog-category.inspiration-main .blog-content a,
-.blog-category.inspiration-main .blog-content h3 {
+.blog-category.inspiration-main .blog-content h3,
+.blog-category.inspiration-main .blog-content h2 {
   color: #684458; }
 
 .blog-category.made-main .cat-highlight,
 .blog-category.made-main .blog-content a,
-.blog-category.made-main .blog-content h3 {
+.blog-category.made-main .blog-content h3,
+.blog-category.made-main .blog-content h2 {
   color: #0074c8; }
 
 .blog-category.thinking-main .cat-highlight,
 .blog-category.thinking-main .blog-content a,
-.blog-category.thinking-main .blog-content h3 {
+.blog-category.thinking-main .blog-content h3,
+.blog-category.thinking-main .blog-content h2 {
   color: #70a087; }
 
 .blog-category.people-main .cat-highlight,
 .blog-category.people-main .blog-content a,
-.blog-category.people-main .blog-content h3 {
+.blog-category.people-main .blog-content h3,
+.blog-category.people-main .blog-content h2 {
   color: #00bc6f; }
 
 .blog-category.process-main .cat-highlight,
 .blog-category.process-main .blog-content a,
-.blog-category.process-main .blog-content h3 {
+.blog-category.process-main .blog-content h3,
+.blog-category.process-main .blog-content h2 {
   color: #00c4b3; }
 
 .blog-category.ideas-main .cat-highlight,
 .blog-category.ideas-main .blog-content a,
-.blog-category.ideas-main .blog-content h3 {
+.blog-category.ideas-main .blog-content h3,
+.blog-category.ideas-main .blog-content h2 {
   color: #00795f; }
 
 .blog-category.adventures-main .cat-highlight,
 .blog-category.adventures-main .blog-content a,
-.blog-category.adventures-main .blog-content h3 {
+.blog-category.adventures-main .blog-content h3,
+.blog-category.adventures-main .blog-content h2 {
   color: #dc5f13; }
 
 .blog-category.design-main .cat-highlight,
 .blog-category.design-main .blog-content a,
-.blog-category.design-main .blog-content h3 {
+.blog-category.design-main .blog-content h3,
+.blog-category.design-main .blog-content h2 {
   color: #ffbf3b; }
 
 .blog-category.studio-main .cat-highlight,
 .blog-category.studio-main .blog-content a,
-.blog-category.studio-main .blog-content h3 {
+.blog-category.studio-main .blog-content h3,
+.blog-category.studio-main .blog-content h2 {
   color: #f6323e; }
 
 .blog-category.found-main .cat-highlight,
 .blog-category.found-main .blog-content a,
-.blog-category.found-main .blog-content h3 {
+.blog-category.found-main .blog-content h3,
+.blog-category.found-main .blog-content h2 {
   color: #00a0ae; }
 
 .blog-category.interesting-main .cat-highlight,
 .blog-category.interesting-main .blog-content a,
-.blog-category.interesting-main .blog-content h3 {
+.blog-category.interesting-main .blog-content h3,
+.blog-category.interesting-main .blog-content h2 {
   color: #f46177; }
 
 .blog-content h3 {
