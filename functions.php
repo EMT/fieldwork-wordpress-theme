@@ -125,22 +125,16 @@ function imageGallery($atts, $content = null) {
     // Wrapper for the whole thing.
     $preWrapper = '<div class="images-wrapper"><div class="images">';
     
-    // Do we have any rows ?
     if( have_rows('image_gallery') ): while ( have_rows('image_gallery') ) : the_row();
-       
-            // Do those rows have an ID matching the ID we set as an attribute?
-            if( get_sub_field('id') == $id ) {
 
+            if( get_sub_field('id') == $id ) {
                 $cols = get_sub_field('cols');
                 $layout = $cols;
 
-                // Lets get all the images related to that ID.
                 while( have_rows('images') ): the_row();
-
                     $link = get_sub_field('image');
 
-                    // Video Stuffs.
-
+                    // Video url.
                     if ( get_sub_field('video_url') ) {
                         $video_url = '<div class="play" data-video="'.get_sub_field('video_url').'"></div>';
                         $video = 'blog-video';
@@ -149,17 +143,19 @@ function imageGallery($atts, $content = null) {
                         $video = '';
                     }
 
-
-                    // Do we want a link with that image ?
-                    if ( get_sub_field('link') == 'true' ) {
+                    // Links to media file / external site.
+                    if ( get_sub_field('media') == 'true' ) {
                         $preLinkWrapper = '<a href="'.$link.'"/>';
+                        $postLinkWrapper = '</a>';
+                    } else if ( get_sub_field('link_url') ) {
+                        $preLinkWrapper = '<a href="'.get_sub_field('link_url').'" target="_blank"/>';
                         $postLinkWrapper = '</a>';
                     } else {
                         $preLinkWrapper = '';
                         $postLinkWrapper = '';
                     }
 
-                    // Does each image have a caption, if so show it.
+                    // Image captions
                     if ( get_sub_field('caption') ) {
                         $caption = '<span class="caption cat-highlight">'.get_sub_field('caption').'</span>';
                     } else {
@@ -201,10 +197,7 @@ function imageGallery($atts, $content = null) {
         
     endwhile; endif;
  
-    // Container for the images.
     $postWrapper ='</div></div>';
-
-    // Outputting the whole thing.
     return $preWrapper . $output . $postWrapper;
 }
 
