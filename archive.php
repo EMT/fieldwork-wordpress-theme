@@ -1,9 +1,9 @@
 
 <?php get_header(); ?>
 <div class="wrapper">
-	<ul class="post-list">
+	<ul class="post-list grid">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<li>
+			<li class="grid-item">
 				<article class="post<?php the_category_unlinked(' '); ?>">
 					<a href="<?php the_permalink() ?>">
 						<?php if ( has_post_thumbnail() ) { ?>
