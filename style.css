@@ -426,6 +426,9 @@ li.interesting:hover a:after,
 pre {
   margin-bottom: 1em; }
 
+.image-wrapper {
+  margin-bottom: 1em; }
+
 .hljs {
   font-family: 'Source Code Pro' !important;
   font-size: 0.95em !important;
