@@ -42,6 +42,10 @@
 	clear: both;
 }
 
+.images-wrapper .iframe-wrapper {
+	margin-bottom: 0;
+}
+
 @media only screen and (max-width: 650px) {
 
 	.post-image {
@@ -49,7 +53,7 @@
 	}
 
 	.images-wrapper {
-		width: 100%;
+		width: 100%;	
 	}
 
 	.images {
