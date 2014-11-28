@@ -575,7 +575,9 @@ pre {
 
   .sidebar {
     width: 100%;
-    right: -100%;
+    right: -100%; } }
+@media screen and (max-device-width: 480px) {
+  .sidebar {
     overflow: scroll;
     -webkit-overflow-scrolling: touch; } }
 
