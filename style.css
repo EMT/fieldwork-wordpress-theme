@@ -368,7 +368,11 @@ pre {
     width: 100%; } }
 .sidebar-reveal {
   text-decoration: none;
-  color: #666; }
+  color: white;
+  position: fixed;
+  right: 0;
+  background: rgba(102, 102, 102, 0.7);
+  top: 20%; }
 
 .temp-burger {
   font-size: 40px; }

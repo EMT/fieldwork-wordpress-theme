@@ -1,6 +1,10 @@
 .sidebar-reveal {
 	text-decoration: none;
-	color: #666;
+	color: rgb(255,255,255);
+	position: fixed;
+	right: 0;
+	background: rgba(102, 102, 102,0.7);
+	top: 20%;
 }
 
 .temp-burger {
