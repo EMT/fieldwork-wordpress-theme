@@ -134,5 +134,7 @@
 	.sidebar {
 		width: 100%;
 		right: -100%;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 }

@@ -575,6 +575,8 @@ pre {
 
   .sidebar {
     width: 100%;
-    right: -100%; } }
+    right: -100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch; } }
 
 /*# sourceMappingURL=style.css.map */
