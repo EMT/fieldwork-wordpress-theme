@@ -14,3 +14,24 @@ $('.blog-video').on('click', function(){
 
 
 
+$('.js-reveal').on('click', function(e){
+	e.preventDefault();
+	$('.black-overlay').addClass('shown');
+	$('.page-content').addClass('moved');
+	$('header').addClass('moved');
+	$('.sidebar').addClass('moved');
+	$('.hero-picture').addClass('moved');
+});
+
+$('.js-sidebar-close').on('click', function(e){
+	e.preventDefault();
+	$('.black-overlay').addClass('fade-out');
+	setTimeout(function(){
+		$('.black-overlay').removeClass('shown');
+		$('.black-overlay').removeClass('fade-out');
+	},300);
+	$('.page-content').removeClass('moved');
+	$('header').removeClass('moved');
+	$('.sidebar').removeClass('moved');
+	$('.hero-picture').removeClass('moved');
+});

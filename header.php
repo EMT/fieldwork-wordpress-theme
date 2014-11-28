@@ -1,4 +1,4 @@
-<?php header("Access-Control-Allow-Origin: *"); ?>
+<?php // header("Access-Control-Allow-Origin: *"); ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -23,6 +23,8 @@
 	}
 ?>
 <body <?php body_class($is_project); ?>>
+<?php get_sidebar(); ?>
+<div class="black-overlay"></div>
 <header>
 	<div>
 		<a class="marque" href="http://emt.github.io/fieldwork-v2/">
@@ -40,6 +42,7 @@
 			<a class="us fade-transition" href="http://emt.github.io/fieldwork-v2/us">Us</a>
 			<a class="journal fade-transition" href="/">Feed</a>
 			<a class="contact fade-transition" href="http://emt.github.io/fieldwork-v2/contact">Contact</a>
+			<a class="sidebar-reveal js-reveal" href="#"><span class="temp-burger">&equiv;</span></a>
 		</nav>
 	</div>
 </header>
