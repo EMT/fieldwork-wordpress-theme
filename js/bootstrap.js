@@ -35,3 +35,9 @@ $('.js-sidebar-close').on('click', function(e){
 	$('.sidebar').removeClass('moved');
 	$('.hero-picture').removeClass('moved');
 });
+
+        $("body").ready(function () {
+
+                $("a").has("img").addClass("img-link");
+
+        });

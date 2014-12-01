@@ -46,6 +46,10 @@
 
 }
 
+.page-section .img-link {
+	border-bottom: none;
+}
+
 .blog-content {
 	min-height: 300px;
 }
@@ -61,6 +65,7 @@
 	}	
 }
 
+a img { border:none; vertical-align:top; }
 
 
 .post-image {

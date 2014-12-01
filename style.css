@@ -325,6 +325,9 @@ pre {
     float: left;
     position: static;
     margin-top: 2em; } }
+.page-section .img-link {
+  border-bottom: none; }
+
 .blog-content {
   min-height: 300px; }
 
@@ -334,6 +337,10 @@ pre {
 .blog-content img {
   max-width: 100%;
   display: block; }
+
+a img {
+  border: none;
+  vertical-align: top; }
 
 .post-image {
   height: 0;
