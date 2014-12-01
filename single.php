@@ -7,8 +7,10 @@
 			<div class="wrapper">
 				<div class="section-title">
 					<h1 class="cat-highlight"><?php the_title(); ?></h1>
-					<p class="section-runner">Posted on <?php the_time('j F Y'); ?></p>
-					<p class="section-runner post-author">Posted by <span class="author-link"><?php the_author_posts_link(); ?></span></p>
+					<div class="section-runner blog-meta-data">
+						<p>Posted on <?php the_time('j F Y'); ?></p>
+						<p class="post-author">Posted by <span class="author-link"><?php the_author_posts_link(); ?></span></p>
+					</div>
 					<div class="project-social">
 						<ul>
 							<li><a href="#" target="_blank">Tweet</a></li>

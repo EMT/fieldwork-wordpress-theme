@@ -303,7 +303,7 @@ pre {
   bottom: 2em;
   left: 0; }
 
-.blog-content :last-child {
+.blog-content > :last-child {
   margin-bottom: 0 !important; }
 
 .hero .related-posts p {
@@ -346,21 +346,14 @@ pre {
 .blog-content ul {
   margin-bottom: 1em; }
 
-.hero-picture {
-  position: relative;
-  z-index: -1;
-  background-position: center center !important; }
-
-.hero {
-  padding-bottom: 5% !important;
-  margin-bottom: 0 !important;
-  background: white; }
-
 .text > .wrapper {
   position: relative; }
 
 .home, .archive {
   margin-top: 6em; }
+
+.single .blog-meta-data p {
+  margin-bottom: 0.3em; }
 
 @media screen and (max-width: 980px) {
   .blog-category .section-title {
