@@ -25,17 +25,16 @@
 <body <?php body_class($is_project); ?>>
 <?php get_sidebar(); ?>
 <div class="black-overlay"></div>
-<header>
+<header id="site-header">
 	<div>
 		<a class="marque" href="http://emt.github.io/fieldwork-v2/">
-			<img class="white-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo-white.svg" alt="Fieldwork – Home" />
 			<img class="red-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo.svg" alt="Fieldwork – Home" />
 		</a>
 		<ul class="social-icons header-social-icons">
-			<li><a href="https://twitter.com/MadeByFieldwork" class="icon-twitter"></a></li>
-			<li><a href="http://instagram.com/madebyfieldwork" class="icon-instagram"></a></li>
-			<li><a href="https://www.facebook.com/madebyfieldwork" class="icon-facebook"></a></li>
-			<li><a href="https://github.com/EMT" class="icon-github"></a></li>
+				<li><a href="https://twitter.com/MadeByFieldwork" class="icon-twitter"></a></li>
+				<li><a href="http://instagram.com/madebyfieldwork" class="icon-instagram"></a></li>
+				<li><a href="https://www.facebook.com/madebyfieldwork" class="icon-facebook"></a></li>
+				<li><a href="https://github.com/EMT" class="icon-github"></a></li>
 		</ul>
 		<nav>
 			<a class="work fade-transition" href="http://emt.github.io/fieldwork-v2/work">Work</a>
@@ -56,3 +55,4 @@
 <?php } ?>
 
 	<div class="page-content">
+
