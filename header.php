@@ -17,11 +17,9 @@
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
-<?php 
-	if ( is_single() ) {
-		$is_project = 'hero-header project';
-	}
-?>
+<?php if ( is_single() ) {
+	$is_project = 'hero-header project';
+} ?>
 <body <?php body_class($is_project); ?>>
 <?php get_sidebar(); ?>
 <div class="black-overlay"></div>
@@ -46,13 +44,8 @@
 	</div>
 </header>
 <div class="blog-category <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
-	
-<?php 
-	if ( is_single() ) { ?>
-
+<?php if ( is_single() ) { ?>
 	<div <?php if ( has_post_thumbnail() ) { ?>style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover;" class="hero-picture"<?php } else { ?> class="hero-picture no-image" <?php } ?>></div>
-
 <?php } ?>
-
 	<div class="page-content">
 
