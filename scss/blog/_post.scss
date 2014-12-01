@@ -15,7 +15,7 @@
 	left: 0;
 }
 
-.blog-content :last-child {
+.blog-content > :last-child {
 	// Remove the important, this is just cause its in the wrong file.
 	margin-bottom: 0 !important;
 }
