@@ -404,6 +404,7 @@ pre {
   transform: translateY(0px); }
 
 .sidebar ul li {
+  font-size: 1.2em;
   opacity: 0;
   -webkit-transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -moz-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
