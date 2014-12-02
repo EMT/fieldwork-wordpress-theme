@@ -362,10 +362,6 @@ a img {
 .single .blog-meta-data p {
   margin-bottom: 0.3em; }
 
-@media screen and (max-width: 980px) {
-  .blog-category .section-title {
-    float: left;
-    width: 100%; } }
 .sidebar-reveal {
   text-decoration: none;
   color: white;
