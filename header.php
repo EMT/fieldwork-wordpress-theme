@@ -39,10 +39,10 @@
 			<a class="us fade-transition" href="http://emt.github.io/fieldwork-v2/us">Us</a>
 			<a class="journal fade-transition" href="/">Feed</a>
 			<a class="contact fade-transition" href="http://emt.github.io/fieldwork-v2/contact">Contact</a>
-			<a class="sidebar-reveal js-reveal" href="#"><span class="temp-burger">&equiv;</span></a>
 		</nav>
 	</div>
 </header>
+<a class="sidebar-reveal js-reveal" href="#"><span class="temp-burger">&equiv;</span></a>
 <div class="blog-category <?php if (is_single()) { $yourcat = get_category( get_post_meta($post->ID, 'mob_category_prefered', true) ); echo $yourcat->slug . "-main"; }; ?> <?php if(is_archive()) { echo $wp_query->query['category_name'] . '-main'; }; ?>">
 <?php if ( is_single() ) { ?>
 	<div <?php if ( has_post_thumbnail() ) { ?>style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover;" class="hero-picture"<?php } else { ?> class="hero-picture no-image" <?php } ?>></div>

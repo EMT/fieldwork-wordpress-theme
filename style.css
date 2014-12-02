@@ -368,10 +368,12 @@ a img {
   position: fixed;
   right: 0;
   background: rgba(102, 102, 102, 0.7);
-  top: 20%; }
+  top: 20%;
+  padding: 1em 0.5em;
+  line-height: 0.75em; }
 
 .temp-burger {
-  font-size: 40px; }
+  font-size: 3em; }
 
 .sidebar {
   position: fixed;
