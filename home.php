@@ -15,7 +15,7 @@
 					<ul class="category-icons">
 						<?php 
 						foreach((get_the_category()) as $category) { 
-							echo "<li class='" . $category->slug . "'><a class='tag' href='" . get_category_link($category->term_id ) . "'></a></li>";
+							echo "<li data-tooltip='" . $category->slug . "' class='" . $category->slug . "'><a class='tag' href='" . get_category_link($category->term_id ) . "'></a></li>";
 						} 
 						?>
 					</ul>
