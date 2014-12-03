@@ -378,13 +378,19 @@ a img {
     width: 100%;
     display: block;
     position: static;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding: 1em 0; }
+
+  .single .sidebar-reveal {
+    margin-bottom: 0; }
 
   .temp-burger {
     width: 90%;
     display: block;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .home, .archive {
+    margin-top: 0; } }
 .temp-burger {
   font-size: 1em; }
 

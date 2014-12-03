@@ -46,5 +46,5 @@ $("body").ready(function () {
 
 $(document).ready(function(){
 	var headerHeight = $('header').outerHeight();
-	$('body').css('margin-top',headerHeight);
+	$('body').css('padding-top',headerHeight);
 });
