@@ -10,6 +10,15 @@
 	z-index: 200;
 }
 
+@media screen and (max-width: 800px) {
+	.sidebar-reveal {
+		width: 100%;
+		display: block;
+		position: static;
+		margin-bottom: 1em;
+	}
+}
+
 .temp-burger {
 	font-size: 1em;
 }
