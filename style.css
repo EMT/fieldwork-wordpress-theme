@@ -437,6 +437,9 @@ a img {
   -moz-transform: translateY(10px);
   transform: translateY(10px); }
 
+.sidebar ul li a {
+  transition: color 0.3s ease-out; }
+
 .sidebar.moved ul li {
   opacity: 1;
   -webkit-transform: translateY(0px);
