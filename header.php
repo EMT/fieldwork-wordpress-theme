@@ -37,7 +37,7 @@
 		<nav>
 			<a class="work fade-transition" href="http://emt.github.io/fieldwork-v2/work">Work</a>
 			<a class="us fade-transition" href="http://emt.github.io/fieldwork-v2/us">Us</a>
-			<a class="journal fade-transition" href="/">Feed</a>
+			<a class="journal fade-transition selected" href="/">Feed</a>
 			<a class="contact fade-transition" href="http://emt.github.io/fieldwork-v2/contact">Contact</a>
 		</nav>
 	</div>
