@@ -384,14 +384,14 @@ a img {
   .single .sidebar-reveal {
     margin-bottom: 0; }
 
-  .temp-burger {
+  .sidebar-reveal-text {
     width: 90%;
     display: block;
     margin: 0 auto; }
 
   .home, .archive {
     margin-top: 0; } }
-.temp-burger {
+.sidebar-reveal-text {
   font-size: 1em; }
 
 .sidebar {

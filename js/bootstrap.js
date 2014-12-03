@@ -14,7 +14,7 @@ $('.blog-video').on('click', function(){
 
 
 
-$('.js-reveal').on('click', function(e){
+$('.js-reveal').click( function(e){
 	e.preventDefault();
 	$('.black-overlay').addClass('shown');
 	$('.page-content').addClass('moved');
@@ -26,7 +26,7 @@ $('.js-reveal').on('click', function(e){
 	}
 });
 
-$('.js-sidebar-close').on('click', function(e){
+$('.js-sidebar-close').click(function(e){
 	e.preventDefault();
 	$('.black-overlay').addClass('fade-out');
 	setTimeout(function(){
@@ -40,11 +40,11 @@ $('.js-sidebar-close').on('click', function(e){
 	$('.sidebar-reveal').removeClass('moved');
 });
 
-$("body").ready(function () {
+$(document).ready(function () {
      $("a").has("img").addClass("img-link");
 });
 
-$(document).ready(function(){
+$(document).on('ready resize'(){
 	var headerHeight = $('header').outerHeight();
 	$('body').css('padding-top',headerHeight);
 });
