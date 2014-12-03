@@ -13,7 +13,7 @@
 	<title><?php echo (wp_title('', false)) ? wp_title('', false) . ' – ' : ''; ?><?php bloginfo( 'name' ); ?></title>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendor/default.css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://emt.github.io/fieldwork-v2/css/main.css" type="text/css">
+	<link rel="stylesheet" href="http://madebyfieldwork.com/css/main.css" type="text/css">
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
@@ -25,7 +25,7 @@
 <div class="black-overlay"></div>
 <header id="site-header">
 	<div>
-		<a class="marque" href="http://emt.github.io/fieldwork-v2/">
+		<a class="marque" href="http://madebyfieldwork.com">
 			<img width="12px" height="20px" class="red-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo.svg" alt="Fieldwork – Home" />
 		</a>
 		<ul class="social-icons header-social-icons">
