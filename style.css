@@ -367,14 +367,14 @@ a img {
   color: white;
   position: fixed;
   right: 0;
-  background: rgba(102, 102, 102, 0.7);
+  background: #ff3043;
   top: 20%;
   padding: 1em 0.5em;
   line-height: 0.75em;
   z-index: 200; }
 
 .temp-burger {
-  font-size: 3em; }
+  font-size: 1.2em; }
 
 .sidebar {
   position: fixed;
