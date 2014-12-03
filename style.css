@@ -378,7 +378,13 @@ a img {
     width: 100%;
     display: block;
     position: static;
-    margin-bottom: 1em; } }
+    margin-bottom: 1em;
+    padding: 1em 0; }
+
+  .temp-burger {
+    width: 90%;
+    display: block;
+    margin: 0 auto; } }
 .temp-burger {
   font-size: 1em; }
 
@@ -559,7 +565,7 @@ a img {
   opacity: 0.7;
   visibility: visible; }
 
-.page-content, .sidebar, header, .hero-picture {
+.page-content, .sidebar, header, .hero-picture, .sidebar-reveal {
   -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -moz-transition: -moz-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
@@ -567,7 +573,7 @@ a img {
 .black-overlay.fade-out {
   opacity: 0; }
 
-.page-content.moved, header.moved, .hero-picture.moved {
+.page-content.moved, header.moved, .hero-picture.moved, .sidebar-reveal.moved {
   -webkit-transform: translateX(-100px);
   -moz-transform: translateX(-100px);
   transform: translateX(-100px); }

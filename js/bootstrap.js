@@ -21,6 +21,10 @@ $('.js-reveal').on('click', function(e){
 	$('header').addClass('moved');
 	$('.sidebar').addClass('moved');
 	$('.hero-picture').addClass('moved');
+	console.log($('html').innerWidth());
+	if ( $(window).innerWidth() <= 800 ) {
+		$('.sidebar-reveal').addClass('moved');
+	}
 });
 
 $('.js-sidebar-close').on('click', function(e){
@@ -34,6 +38,7 @@ $('.js-sidebar-close').on('click', function(e){
 	$('header').removeClass('moved');
 	$('.sidebar').removeClass('moved');
 	$('.hero-picture').removeClass('moved');
+	$('.sidebar-reveal').removeClass('moved');
 });
 
         $("body").ready(function () {
