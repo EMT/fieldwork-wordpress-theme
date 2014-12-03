@@ -21,7 +21,6 @@ $('.js-reveal').on('click', function(e){
 	$('header').addClass('moved');
 	$('.sidebar').addClass('moved');
 	$('.hero-picture').addClass('moved');
-	console.log($('html').innerWidth());
 	if ( $(window).innerWidth() <= 800 ) {
 		$('.sidebar-reveal').addClass('moved');
 	}
@@ -41,8 +40,11 @@ $('.js-sidebar-close').on('click', function(e){
 	$('.sidebar-reveal').removeClass('moved');
 });
 
-        $("body").ready(function () {
+$("body").ready(function () {
+     $("a").has("img").addClass("img-link");
+});
 
-                $("a").has("img").addClass("img-link");
-
-        });
+$(document).ready(function(){
+	var headerHeight = $('header').outerHeight();
+	$('body').css('margin-top',headerHeight);
+});
