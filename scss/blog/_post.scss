@@ -61,7 +61,7 @@
 
 .blog-content {
 	img {
-		max-width: 100%;
+		width: 100%; // This is temp, we want to change it to max-width when we have redone all the blog images.
 		display: block;
 	}	
 }

@@ -335,7 +335,7 @@ pre {
   margin-bottom: 0.5em; }
 
 .blog-content img {
-  max-width: 100%;
+  width: 100%;
   display: block; }
 
 a img {
