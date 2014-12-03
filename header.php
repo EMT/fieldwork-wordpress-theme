@@ -26,7 +26,7 @@
 <header id="site-header">
 	<div>
 		<a class="marque" href="http://emt.github.io/fieldwork-v2/">
-			<img class="red-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo.svg" alt="Fieldwork – Home" />
+			<img width="12px" height="20px" class="red-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo.svg" alt="Fieldwork – Home" />
 		</a>
 		<ul class="social-icons header-social-icons">
 				<li><a href="https://twitter.com/MadeByFieldwork" class="icon-twitter"></a></li>
