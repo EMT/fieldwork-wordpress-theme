@@ -63,9 +63,11 @@
   display: block;
   margin: 1em 0 3em 0; }
 .pagination .next {
-  float: right; }
+  float: right;
+  margin-right: 0.5em; }
 .pagination .prev {
-  float: left; }
+  float: left;
+  margin-left: 0.5em; }
 
 .author, .date {
   color: #a7a9ac;
