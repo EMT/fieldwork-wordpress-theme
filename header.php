@@ -35,10 +35,10 @@
 				<li><a href="https://github.com/EMT" class="icon-github"></a></li>
 		</ul>
 		<nav>
-			<a class="work fade-transition" href="http://emt.github.io/fieldwork-v2/work">Work</a>
-			<a class="us fade-transition" href="http://emt.github.io/fieldwork-v2/us">Us</a>
+			<a class="work fade-transition" href="http://madebyfieldwork.com/work">Work</a>
+			<a class="us fade-transition" href="http://madebyfieldwork.com/us">Us</a>
 			<a class="journal fade-transition selected" href="/">Blog</a>
-			<a class="contact fade-transition" href="http://emt.github.io/fieldwork-v2/contact">Contact</a>
+			<a class="contact fade-transition" href="http://madebyfieldwork.com/contact">Contact</a>
 		</nav>
 	</div>
 </header>
