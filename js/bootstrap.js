@@ -44,7 +44,7 @@ $(document).ready(function () {
      $("a").has("img").addClass("img-link");
 });
 
-$(document).on('ready resize'(){
+$(document).on('ready resize', function() {
 	var headerHeight = $('header').outerHeight();
 	$('body').css('padding-top',headerHeight);
 });
