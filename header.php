@@ -29,15 +29,15 @@
 			<img width="12px" height="20px" class="red-marque" src="<?php echo get_template_directory_uri(); ?>/images/fw-logo.svg" alt="Fieldwork – Home" />
 		</a>
 		<ul class="social-icons header-social-icons">
-				<li><a href="https://twitter.com/MadeByFieldwork" class="icon-twitter"></a></li>
-				<li><a href="http://instagram.com/madebyfieldwork" class="icon-instagram"></a></li>
-				<li><a href="https://www.facebook.com/madebyfieldwork" class="icon-facebook"></a></li>
-				<li><a href="https://github.com/EMT" class="icon-github"></a></li>
+			<li><a href="https://twitter.com/MadeByFieldwork" class="icon-twitter"></a></li>
+			<li><a href="http://instagram.com/madebyfieldwork" class="icon-instagram"></a></li>
+			<li><a href="https://www.facebook.com/madebyfieldwork" class="icon-facebook"></a></li>
+			<li><a href="https://github.com/EMT" class="icon-github"></a></li>
 		</ul>
 		<nav>
 			<a class="work fade-transition" href="http://madebyfieldwork.com/work">Work</a>
 			<a class="us fade-transition" href="http://madebyfieldwork.com/us">Us</a>
-			<a class="journal fade-transition selected" href="/">Blog</a>
+			<a class="journal fade-transition selected" href="/emt">Blog</a>
 			<a class="contact fade-transition" href="http://madebyfieldwork.com/contact">Contact</a>
 		</nav>
 	</div>
