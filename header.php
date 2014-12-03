@@ -11,9 +11,9 @@
 	It's been our pleasure.
 	-->
 	<title><?php echo (wp_title('', false)) ? wp_title('', false) . ' – ' : ''; ?><?php bloginfo( 'name' ); ?></title>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendor/default.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendor/default.css?v2">
 	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://madebyfieldwork.com/css/main.css" type="text/css">
+	<link rel="stylesheet" href="http://madebyfieldwork.com/css/main.css?v2" type="text/css">
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
