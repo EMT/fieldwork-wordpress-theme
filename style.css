@@ -374,7 +374,7 @@ a img {
   z-index: 200; }
 
 .home .sidebar-reveal, .archive .sidebar-reveal {
-  top: 0; }
+  top: auto; }
 
 @media screen and (max-width: 800px) {
   .sidebar-reveal {
