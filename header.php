@@ -16,6 +16,16 @@
 	<link rel="stylesheet" href="http://madebyfieldwork.com/css/main.css?v2" type="text/css">
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
+	<?php if ( is_single() ) { ?>
+		<meta property="og:title" content="<?php the_title(); ?>"/>
+		<meta property="og:type" content="post"/>
+		<meta property="og:url" content="<?php the_permalink(); ?>"/>
+		<meta property="og:image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>"/>
+		<meta property="og:site_name" content="Fieldwork"/>
+		<meta property="og:description"
+		      content="<?php the_excerpt(); ?>"/>
+	<?php } ?>
+
 </head>
 <?php if ( is_single() ) {
 	$is_project = 'hero-header project';

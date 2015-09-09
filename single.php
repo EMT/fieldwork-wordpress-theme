@@ -12,10 +12,10 @@
 					</div>
 					<div class="project-social">
 						<ul>
-							<li><a href="#" target="_blank">Tweet</a></li>
-							<li><a href="#" target="_blank">Share</a></li>
-							<li><a href="#" target="_blank">Pin</a></li>
-							<li><a href="#" target="_blank">Tumbl</a></li>
+							<li><a href="http://twitter.com/share?text=Check out this article on Fieldwork's blog...&url=<?php the_permalink(); ?>" target="_blank">Tweet</a></li>
+							<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank">Share</a></li>
+							<li><a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" target="_blank">Pin</a></li>
+							<li><a href="http://www.tumblr.com/share/photo?source=<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>&caption=<?php the_excerpt(); ?>&clickthru=" target="_blank">Tumbl</a></li>
 						</ul>
 					</div>
 				</div>
