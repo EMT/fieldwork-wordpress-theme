@@ -136,7 +136,7 @@
 
 .caption {
   margin-top: 0.50em;
-  display: inline-block; }
+  display: block; }
 
 .images {
   margin: 0 -10px 2em -10px; }
