@@ -310,6 +310,22 @@ pre {
   bottom: 2em;
   left: 0; }
 
+.fluid-video {
+  position: relative;
+  padding-bottom: 50.25%;
+  /* Magic number -- i'll generate this with javascript in the future. */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 16px; }
+
+.fluid-video iframe,
+.fluid-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .blog-content > :last-child {
   margin-bottom: 0 !important; }
 
