@@ -93,7 +93,7 @@ function add_theme_scripts() {
     wp_enqueue_script( 'bquery', get_template_directory_uri() . '/js/jquery.min.js','','',true);
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js','','',true);
     wp_enqueue_script( 'touchSwipe', get_template_directory_uri() . '/js/jquery.touchSwipe.js','','',true);
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js','','',true);
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js','','123',true);
 }
 
 
@@ -144,11 +144,14 @@ function imageGallery($atts, $content = null) {
                     }
 
                     // Links to media file / external site.
-                    if ( get_sub_field('media') == 'true' ) {
-                        $preLinkWrapper = '<a href="'.$link.'"/>';
+                    if ( get_sub_field('video_url') ) {
+                        $preLinkWrapper = '<a href="'.get_sub_field('video_url').'" target="_blank"/>';
                         $postLinkWrapper = '</a>';
                     } else if ( get_sub_field('link_url') ) {
                         $preLinkWrapper = '<a href="'.get_sub_field('link_url').'" target="_blank"/>';
+                        $postLinkWrapper = '</a>';
+                    } else if ( get_sub_field('media') == 'true' ) {
+                        $preLinkWrapper = '<a href="'.$link.'"/>';
                         $postLinkWrapper = '</a>';
                     } else {
                         $preLinkWrapper = '';
